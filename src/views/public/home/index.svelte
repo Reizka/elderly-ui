@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import { Navigate } from 'svelte-router-spa'
+  import Guidelines from '../../components/Guidelines/index.svelte'
 
   onMount(() => {
     console.log('index -> on mount')
@@ -21,6 +22,8 @@
 <div>
   <div class="">
     <h1>Elderly UI</h1>
+    <Guidelines />
+    <p>This the project!!!</p>
     <Navigate to="login">Login</Navigate>
     <Navigate to="signup">signup</Navigate>
   </div>

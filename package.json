@@ -28,6 +28,7 @@
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
+    "d3-dsv": "^2.0.0",
     "firebase": "^7.0.0",
     "materialize-css": "^1.0.0",
     "svelte-router-spa": "^5.0.0",

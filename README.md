@@ -92,7 +92,7 @@ Your comments, suggestions and improvements are [very welcome](https://github.co
 
 ## Credits
 
-Svelte-Firebase has been created by [Jorge Alvarez](https://www.alvareznavarro.es).
+Based on Svelte-Firebase has been created by [Jorge Alvarez](https://www.alvareznavarro.es).
 
 ## License
 

@@ -23,9 +23,9 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file — better for performance
-      css: css => {
-        css.write('public/bundle.css')
-      },
+      // css: css => {
+      //   css.write('public/bundle.css')
+      // },
       preprocess: sveltePreprocess({
         // https://github.com/kaisermann/svelte-preprocess/#user-content-options
         sourceMap: !production,
@@ -38,7 +38,7 @@ export default {
         },
       }),
     }),
-    css({ output: 'public/plugins.css' }),
+    // css({ output: 'public/plugins.css' }),
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration —

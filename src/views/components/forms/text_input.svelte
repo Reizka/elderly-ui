@@ -10,15 +10,13 @@
   export let isFocused = false
   export let errorMessage = 'Please enter a value.'
 
-  afterUpdate(() => {
-    M.updateTextFields()
-  })
+  // afterUpdate(() => {
+  //   M.updateTextFields()
+  // })
 </script>
 
 <div class="input-field">
-  {#if icon}
-    <i class="material-icons prefix">{icon}</i>
-  {/if}
+  {#if icon}<i class="material-icons prefix">{icon}</i>{/if}
   <input
     bind:value
     on:input={() => (error = false)}

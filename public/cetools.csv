@@ -1,0 +1,788 @@
+code,CHECK,GUIDELINE,c_HEUMLE,c_SW,c_WCAG,c_D4ALL,n. papers,Important,"touchscreen 
+specific",web specific,General,multimodal,"supplementary
+device/tool",text,font,icon/image/grapchics,"screen design
+(appearance)",color,customization,navigation,errors,feedback,"special 
+needs","data 
+input","element-
+content","element-
+interaction","element-
+size","elemet-
+placing",HEUMLE,,,,,SW,,,WCAG,,,,,,,D4All,,,,,,,,,,,,,,,,,,,
+1,"Supplementary methods (audio, video, images, etc) is used to deliver information to users?","- If possible provide information always by more than one way (e.,g, text, images, sound, video)","-Are the icons clear, understandable and labeled?","- Images should have alt tags
+- Provide text alternatives for non-text content that serves the same purpose.","-provide clear audio only alternative to video content         
+-                                              
+    
+    Don’t use an image of text when you can use plain text
+    Display quotes as text rather than images
+    Use CSS to style headings as text
+    Use CSS to style navigation menus as text
+                 ","-...multimodal container of the type redundancy (text, images and vocal output)
+- Video chatting performance by people with aphasia - Among other user groups, two studies support the use of symbols and pictograms for chatting 
+- Use labeled icons
+- Avoid pure images and icons , place them near the significant description
+- Provide easy-to-understand icons followed by caption or description
+- Use simple graphics and keep written information and other visual distractions to a minimum.
+- Present buttons menu by icons and labels
+- Use sounds to present information available on the visual display
+- Use colours, icons and graphics. Often better than using text.
+- Use images or sounding to supplement text-based information
+- Implement auditory indicators of battery status, signal strength and roaming
+- Use video to facilitate understanding text
+- Do not rely only on the auditory background
+- Let the user to know what he/she can do. Provide audio instructions of a human voice describing the options set to the user.
+-Add video of the instructions on how to use the ballot
+- This application provides different modes of feedback such as audio, tactile, or visual feedback.
+- The use of pictures for making and receiving phone calls
+- Develop buttons with labels instead of images
+- Use different colors to categorize information visually",24,y,n,n,y,y,n,n,n,n,n,n,n,n,n,n,y,n,y,n,n,n,7,-,-,-,-,6,-,-,2,1,32,51,-,-,-,228,40,420,290,294,152,273,213,393,81,288,167,289,342,32,274,356,22,292,252
+2,Good color contrast and color combination for text and background,"- Best background color is white(ish), not pure white but softer tone of it
+- Best default font color is black
+- Provide dark mode -> inversing white and black background & text, without breaking potential element borders
+",-,"-  Background screens should not be pure white or change rapidly in brightness between screens. Also, a high contrast between the foreground and background should exist, for example, coloured text on coloured backgrounds should be avoided","- 
+    Using a light background and dark text; or
+    Using a dark background and light text; and
+    Using a colour contrast checker to verify your choice.
+","- Make a contrast ratio: 4.5: 1. Best: text in black, background in white
+- A matching contrast is helpful for a good readability as well. Literature recommends light grey background with
+black fonts as a suitable contrast for elderly people.
+- For older or colour blind users it is necessary to have high colour contrast. 
+-Assure a good colour contrast ratio between background and foreground colours for every 
+interactive component. Even if these elements do not include text...
+- Provide maximized contrast between main information and its surroundings (Visual impairment)
+- Use high contrast coloured elements (visual impairment)
+- Avoid combinations of green and red or yellow and blue 
+-  it is not recommended to use black or dark colours as they highlight finger prints and increase glare
+- Avoid dark color background
+- Avoid fluorescent colors
+- Avoid patterned backgrounds
+- Avoid pure white background
+- Avoid background images
+- Avoid white color background
+- Mazimize the contrast between the foreground and the background colors
+ - Use soft colors
+- Implement 60% opacity for all highlighting to render a good contrast between the black text and background colour. Maintain red underlining of erroneous text, as per the default Android KitKat and Lollipop styl",21,y,n,n,y,n,n,y,y,n,n,y,n,n,n,n,n,n,n,n,n,n,3,-,-,-,-,33,-,-,48,30,-,-,-,-,-,78,89,189,353,410,413,414,100,403,404,405,400,401,408,409,411,86,,,
+3,System offers help/instructions for every major step & function?,"- Provide various ways to guide and aid the user, such as: tiptools, tutorials, recommendations, examples, etc.  
+- Ensure that all major functions are explained and instructed
+- If system shows tutorial/instructions when being used for the first time, ensure it is easy to access them afterwards again
+","- Does the elderly know where is he and what can he do next?
+- Does the launcher provide support to remember functions easily?",-An online help tutorial should be provided,"-Provide detailed help and instructions
+    Use text labels to elements in addition to sensory characteristics    Don’t user instructions that only use sensory characteristics    Avoid instructions that rely on sound","- The instruction was provided to guide on the use of and navigation through the interface
+- Include “built-in” instructions and an example video, to support independent learning and use.
+- The application should have a set of resources aimed to help users when they feel lost.
+- Provide a training mode that teaches the user about each available gesture
+- Provide simple examples
+- Additional time and alternative practice modalities
+- Let the user to know what he/she can do. Provide audio instructions of a human voice describing the options set to the user.
+- Help users in their interaction e.g., through a speaking front end
+- Add video of the instructions on how to use the ballot
+-Display a help panel and tips about the features in the first user access;
+- Outline the main features of the system;
+- M-VUI help material should be designed around actions available and relevant in a specific context. Furthermore, actions should be executable from within the help material rather than having additional steps to recall commands after exiting.
+ -Provide explicit affordances and make the icons indicate how to gesture (e.g. arrows for swiping), even if this means sacrificing aesthetics. (svere cognitive disabilities)",21,y,n,n,y,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,30,37,-,-,-,46,-,-,65,7,-,-,-,-,-,296,220,1,17,148,285,302,19,32,306,274,221,222,311,263,147,,,,
+4,"Are all clickable items large enough? 
+Also when used on most common mobile screen sizes?","- Clickable target area should be at least 12mm wide & 8mm in heigth 
+- 16 - 20mm appears to be optimal",-Are buttons large enough to easily see the image or text on them?,"-To aid with detection and capture of targets, i.e., buttons, they should be clearly visible",-,"-Make sure users will be able to click and select interactive elements in all devices
+-interactive objects such as buttons, icons, and clickable text should at a minimum be larger than 8 mm. Note that some common components in the latest smartphone interfaces, such as keys in a software keyboard and a “back” button in the upper-left corner of a small device, conflict with this guideline
+-Use adaptive algorithms to counteract these problems by resizing touch targets according to predictions of preceding inputs in the background
+-a button size that is at least as large as 15.9 × 9.0 mm, If a small button size must be used, make the spacing larger than 3 mm
+-larger than 50 × 50 the target size of 30 × 30 pixels led to higher error rates.
+-Use larger targets (8 mm or larger in size). 30px buttons on a small screen are error prone
+-Make buttons in the size of 16.5x16.5 mm.  For faster responses use 19.05x19.05mm.
+-The optimal button size for finger selection is believed to be at least 20mm square. Minimum 11.43mm. 
+-medium (12mm) and large (17mm) target sizes produced less errors compared to small target sizes (7mm)
+-no adjacent buttons, and a reaction time of around 1400 ms is acceptable, then an
+acceptable minimum button size is 11.43 mm square. A larger button size, such as
+19.05 mm square, should be used if the task requires better performance. Second, if
+the user interface design uses rows of adjacent buttons and screen space is limited,
+then a button size of 16.51 mm square is acceptable.
+- Use adaptive algorithms to counteract these problems by resizing touch targets 
+- Use tap targets with 14mm of side
+-  Use 12 mm for target size while implementing for both user populations",19,y,y,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,y,n,14,16,-,-,-,1,-,-,-,-,-,-,-,-,-,422,116,66,98,102,129,332,68,130,398,423,117,125,430,141,193,,,,
+5,"All interactable items give sufficient and at least two different forms of feedback (haptic, color, sound) when activated? ","Any interaction with a clickable item provides at least two different forms of feedback: for instance visual, sound, or haptic (mobiles) & color",-Is there audio/visual/haptic confirmation when tapping?,"-There should be clear confirmation of target capture, which should be visible to older adults who should  not be expected to detect small changes",-,"- Highlight the pressed button, if possible, showing a fading “fingerprint” on the display to show the actual touch
+- Make buttons highlighted when pressed to support correct selection
+- Another solution might include providing appropriate visual feedback to indicate where the users touched the screen, even when they have missed all of the interactive targets.
+- This application provides informative feedback (e.g., a beep when pressing a key, an error message, etc.) that I am using it in the right way.
+-  For older adults in particular, this feedback must be salient. Visual feedback (such as color changes on a button as it is “depressed” on the touch screen) may not always be reliable for older adults. Tactile feedback (such as vibrations) or auditory feedback (such as button-press sounds) would be more salient.
+- Make the feedback readable for older adults as they tend to have difficulty in interpreting the meanings of symbolic representations
+-The output modality (i.e. vibration and visual feedback) can in general be assumed as appropriate since several studies report good results for visual tactile feedback. However, previous research also suggests an advantage of auditory haptic over visual haptic feedback for older users executing simple movement tasks
+-Audio and haptic feedback, commonly associated with mobile phones, may  benefit other forms of touch screen systems
+-haptic and audio feedback that the user can enable through settings to augment or completely replace the visual feedback
+-The combination of several signals is recommended for elderly, i.e. haptic feedback when clicking in buttons.
+-Make a brief, distinct sound heard when an item is selected
+-Make names of items on the screen heard as they are touched (for severe visual impairment cases) 
+-Show visual, audible or haptic feedback when users do touch configuration
+- (Interaction) Use tabbing with audio confirmation to help elderly with reduced vision.
+- Visual feedback (such as color changes on a button as it is “depressed” on the touch screen) may not always be reliable for older adults. Tactile feedback (such as vibrations) or auditory feedback (such as button-press sounds) would be more salient
+-  getting an overview of the feedback content via clear movement and magnification method are found helpful. 
+- For icon feedback, develop two-dimensional, which provide spatial and semantic cues. For example, movement - the position of the icon will gradualyl move after icon is touched;
+- Allow enabling feedback to the user in at least three ways: sonification, verbalization and vibration",19,y,y,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,22,-,-,-,-,2,-,-,-,-,-,-,-,-,-,82,196,199,200,12,49,23,26,87,165,168,174,268,419,259,260,370,,,
+6,"Text content is easy to understand? (no abbreviations, slang, unfamiliar expressions, or acronyms and if used an explanation is given)","Avoid using acronyms, slang or abbreviations. However, if necessary, always accompany with explanation",-Does the launcher use words that majority of older adults are familiar with?,"-The language should be natural, simple and relevant to the user and should not contain any technical jargon","- 62
+     9 year old can understand the language used
+- 63
+     explain hard to pronounce words","- Be aware that words the designer may find commonplace may be arcane to an elder.
+- Find representative words and icons. Use common words or icons or check with final users if they mean what you expect.
+- The use of easy-to-understand language instead of computer jargon is crucial
+- There must be also concerns on providing easy-to understand privacy options 
+- Use wordings that suit the alderfly’s semantic field
+- Guide the user by means of messages in clear, objective and educational language;
+- Ensure that grammar and spelling are correct
+- abbreviations and Symbols
+- Avoid using double negatives
+- Ensure that text is simple and facile to understand
+- Avoid large blocks of italic text or bold text or underlined text
+- Use bold only to highlight a key word or a title;
+- Use capital letters for highlight important text.
+- Use uppercase to highlight key words",19,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,19,-,-,-,-,18,22,-,62,63,-,-,-,-,-,45,46,50,52,284,293,277,280,281,282,379,387,80,249,,,,,,
+7,No unnecessary visual distractions? ,"- Only icons/images/colors/graphics that either contribute to enhancing fa unction or a message should be used
+- Do not use unnessary graphics
+- Avoid popups, asides confirmation and error windows
+- Avoid advertisements
+- Limit number of images per view as much as possible
+- Avoid transparent elements. Ensure that background is either sufficiently blurred or hidden to avoid distracting user",-,"- Provide only one open window eg. pop up/animated  advertisements or multiple overlapping windows should be avoided
+- Graphics should be relevant and not for decoration. ",-,"- Use simple graphics and keep written information and other visual distractions to a minimum.
+- Remove from user interface unnecessary elements calling attention such as ads banners
+- Minimise the number of interface elements,
+- interface design should take a minimal design approach respecting the limited screen space and be considerate not to overload user's visual attention span
+-When designing the interface you need to consider what you want the user to see, for example, being consistent when grouping elements to aid navigation and eliminating extraneous features so the screen is not cluttered
+-Provide the fewest possible of choices to users
+- visual changes that aim to focus the user attention on the most probable keys, have a negative impact in text-input speed
+- Avoid instant features that change with each new interaction such as filters and auto-completion
+-Avoid utilising too much images
+- Avoid utilising too much color
+- Avoid unnecessary decoration
+- Ensure that images are not only for decoration
+- The screen should not contain any distracting elements (e.g. wallpaper, minimal amount of buttons, text etc.). 
+- Avoid utilising too much images
+- Keep the interfaces clean with minimal distractions to miminise use of limited attention resources.",18,y,n,n,y,n,n,n,n,y,y,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,16,5,-,-,-,-,-,-,-,-,152,256,27,258,43,270,114,264,239,242,253,254,251,239,63,397,,,,
+8,"Elements (such as buttons, input fields, labels, background, containers) do not change/disappear without user's permission?","- A view should never change without the user's confirmation
+- Avoid time limited tasks & functions (that disappear after the time limit)",-,- Provide ample time to read information,"- Elements do not change when they receive input
+- Time limits have user controls
+- No time limits
+- Don't interrupt users
+- Elements do not change when they receive focus
+- Don’t change elements on your website until users ask
+","-If a multi-mode design is needed, provide an explicit feedback about mode-changes and a display of the current mode. The indicators of mode changes should be persistent and large, since the elderly users may fail to notice short alerts or small changes in the look-and-feel.
+-visual changes that aim to focus the user attention on the most probable keys, have a negative impact in text-input speed
+- Use visual changes only to give feedback about the pressed and released key.
+- Avoid instant features that change with each new interaction such as filters and auto-completion
+- Provide users enough time to use or read content
+- Avoid time dependent controls
+- Allow wait time setting on entering each character ",15,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,28,-,-,21,12,54,53,20,64,55,84,114,115,264,234,331,365,,,,,,,,,,,,,
+9,There is enough space around clickable items to avoid erroneus clicks?,"- Minimum space between buttons should be 3mm 
+- Spacing of up to 12mm is recommended. 
+- Ensure spacing is not exaggerated, it is likely counterproductive
+- Clicking on the edge of one button, should not activate any neighbouring buttons",-Is there enough space between buttons to prevent hitting multiple or incorrect buttons?,-,-,"- a space between 3.17mm and 12.7mm is needed to lower performance error rates for older users.
+- Yes and No touch buttons were located at the farther left and right sides of the touchscreen
+- Make buttons spacing of 3.17-6.35mm
+- Deal with poor aiming rather than finger slips. 
+- Spacing between the buttons is required to be between 3.17mm and 12.7mm
+- Maintain minimum spacing of 44 pixels between interface elements
+- Address the gap between intended and actual touch locations. The elderly tend to miss their intended targets due to parallax and the large contact area of each finger
+- If the user interface design uses rows of adjacent buttons on a single screen, then the buttons should be separated by a space of 3.17 mm to 12.7 mm. Older
+adult subjects preferred a spacing of 6.35 mm ... Large spacing (19.05 mm in this experiment) will only increase the time for searching the screen and moving to touch the target
+buttom
+- Older adults with relatively normal manual dexterity, then a button size of 16.51 mm and spacing of 3.17 mm to 6.35 mm should be appropriate for screen layouts that require rows of adjacent buttons. However, for older adults with poor manual dexterity a larger button size, at least 19.05 mm and a larger spacing, 6.35 mm to 12.7 mm, is required.",15,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,15,-,-,-,-,-,-,-,-,-,-,-,-,-,-,103,104,333,416,424,428,432,433,423,129,199,125,69,70,,,,,,
+10,Is the font large enough?,"- Minimum size should be 6pt
+- Optimal range is 9-12pt
+- For visually impaired users 12pt or more should be used
+- For chinese font 8pt is recommended",-,"Use i.e.,1–4 point size. 
+Avoid other fancy font types",,"- Provide a font size of 12-14 points. It could be a problem when same text has to be written in different languages and resultant phrase has different length.
+- lower bound at 6, otherwise 9-12 range and positive comments for 8,10,12
+- 16pt (public touchscreen kiosk)
+- phrase lenght may vary depending on language used
+- Information was displayed in sans serif and in at least two font sizes: 3.0–4.0 mm (the height of an upper case letter in the smaller text size) and 6.3–9.0 mm
+- Ensure that the text size for printing is from 12 pt to 14 pt (Visual impairment)
+- Provide larger font type: from 12 pt to 14 pt for body text and 16 pt for titles (visual impairment)
+- 14px or more for low vision users
+- For Chinese text spacing when the font size is 1515 pixels (8 points), the recommended inter-line spacing is 6–8 pixels and the inter-character spacing is 2–4 pixels for higher text readability, lower visual fatigue, and higher user preference.
+",14,y,n,n,y,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,1,-,-,-,-,41,-,-,-,-,-,-,-,-,-,79,88,91,99,357,384,386,422,421,363,390,97,,,,,,,,
+10,Core information is presented clearly ?,"- Information should be categorized in a meaningful way
+- One view, one message
+- One paragraph, one topic
+- Important text at the beginning/top
+- If necessary to draw attention, highlight the most important part of a message (such as  an error message)
+- Split larger text into smaller chunks over several view","- Is the amount of text minimized; is the only necessary information presented
+- Does the options/information have logical sequence?","- Avoid irrelevant information on the screen
+- Information should be concentrated mainly in the centre
+- Important information should be highlighted","-5
+    Break up content with subheadings for new sections
+    Mark headings with HTML header tags
+    Use lists, tables and other formats where needed
+    Use the correct HTML for all structural elements
+    Use valid HTML everywhere
+    Use clear labels and alternative text on forms
+-6 
+
+    Present all content in a meaningful order
+    Separate navigation menus from the content
+    Use paragraphs in order
+    Nest headings from H1 downwards to show their relative importance
+    Choose whether a list needs numbering or not
+    Use valid HTML
+","- Provide a font size of 12-14 points. It could be a problem when same text has to be written in different languages and resultant phrase has different length.
+- lower bound at 6, otherwise 9-12 range and positive comments for 8,10,12
+- 16pt (public touchscreen kiosk)
+- phrase lenght may vary depending on language used
+- Information was displayed in sans serif and in at least two font sizes: 3.0–4.0 mm (the height of an upper case letter in the smaller text size) and 6.3–9.0 mm
+- Ensure that the text size for printing is from 12 pt to 14 pt (Visual impairment)
+- Provide larger font type: from 12 pt to 14 pt for body text and 16 pt for titles (visual impairment)
+- 14px or more for low vision users
+- For Chinese text spacing when the font size is 1515 pixels (8 points), the recommended inter-line spacing is 6–8 pixels and the inter-character spacing is 2–4 pixels for higher text readability, lower visual fatigue, and higher user preference.
+",13,y,n,n,y,n,n,y,n,n,y,n,n,n,n,n,n,n,y,n,n,y,5,20,-,-,-,19,21,20,5,6,,63,-,-,-,11,152,248,255,283,355,30,38,236,258,262,16,37,246,135,312,,,,
+11,Good color contrast and color combination for text and background,"- Allow invoking most tasks with either tapping or buttons
+- When some more common gestures can be used, such as swiping, pinching, ensure that the useris  always aware of them and buttons are available to do the same task","-Does the launcher use tap gestures for most of the actions
+-Do gestures of launcher work correctly and smoothly",-,-,"- using gestures such as swiping the screen horizontally or vertically, depending on the navigation structure. Swiping gestures are common forms of input for smaller touch screen systems such as mobile phone or tablets where the user can swipe their index finger from one side of the screen to another to change the page. Larger surfaces would require more physical effort for this task to be achieved. Familiar gestures such as using a finger or stylus in a crossing off motion (X) to delete an item or ticking () to save an item are particularly compatible for older users learning this input strategy 
+-Avoid relying on gestures that may be novel. Better to give a virtual button than force the user to do ‘invisible’ actions.
+-Consider touch interaction as manageable and preferred. Given that participants enjoy and even if certain actions, specifically panning, might be tiresome for participants, yet they prefer to use their hand to pan across the surface compared to having buttons to scroll through options.
+- Use Tapping and Crossing as they have shown to be the interaction techniques with more resemblances between motor-impaired and able-bodied users.
+-Use tapping gesture as it has shown to be one of the most accurate Interaction Techniques. Use 12 mm for target size while implementing for both user populations
+-Tapping and Crossing have shown to be the more effective interaction techniques
+- Use Tapping for the medium size (12 mm).
+- Use the swipe operation (used to move between pictures in the Photos app) because it seemed easy for everyone to perform and does not require fine positioning
+- Avoid difficult movements e.g., dragging
+- Employ controls that use multiple-taps",13,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,27,29,-,-,-,-,-,-,-,-,-,-,-,-,-,25,56,72,140,141,192,192,194,160,323,327,,,,,,,,,
+13,No bad color combinations or too many colors are used?,"- Limit the number of colors visible at one time
+- Do not use colors that colorblind people commonly struggle with
+- Do not use poor color combinations such as mixes of soft tones, blue and green, combination of fully saturated colors",-,- Blue green tones should be avoided,-,"- Avoid the green and blue colors
+- Avoid combinations of green and red or yellow and blue 
+-Avoid using tones of similar lightness near to each other;
+- Use different colors to categorize information visually
+- Use soft colors
+- Too much colour can be distracting and can make it difficult to see text properly
+- Avoid utilising too much color
+-: onRender
+Condition: the user is colour-blind
+Action: change the foreground colour to black and background colour to white
+- It is also recommended that colour is used to group items together and provide activity feedback but that it should be used sparingly and with colour blind users in mind.",13,y,n,n,y,n,n,n,n,n,y,y,n,n,n,n,y,n,n,n,n,n,6,-,-,-,-,32,31,-,-,-,-,-,-,-,-,92,402,406,407,78,252,411,242,362,191,,,,,,,,,,
+14,Core functions are directly & easily accessible? ,"- Rule of thumb: the core function(s) for current view is (are) always directly accessible
+- Core function(s) should be close to the center of the view, if aesthetically possible, or towards the top
+- Each view should be clearly titled ","- Does the launcher support or provide shortcuts for direct access to the most frequent functions or items?
+- Are important functions always available?",-,-,"- grouping items and functionalities by proximity would help users who have no past experience in finding every function and at the same time give users only the essential information needed for each context
+-Determine what are the most frequent acts that the user wants to do and make them easy. Less frequently used ones can require more effort
+-where possible all menu items should be displayed on the one page. Waloszek (2000) advises that different menu groups (e.g. main menu and secondary menu) should be differentiated by their shape and style
+- Are the important functions placed at the top of screen to avoid mistake touches?
+- Maintain the focus of the system on the current user action without displaying secondary functions;
+-critical functions should never disappear, and important functions should be placed at the top of the screen to avoid mistake touches
+- The most important features should be available directly via a labeled button and not via menu navigation",12,y,n,n,y,n,n,n,n,n,y,n,n,y,n,n,n,n,n,n,n,y,9,36,39,45,-,-,-,-,-,-,-,-,-,-,-,16,132,28,39,42,266,315,270,,,,,,,,,,,,
+15,Are functions & information presented logically?,"- Menu content should be grouped logically, for example settings holds all customization functionality
+- Three tier menu is acceptable, such as setting -> customization options -> actual options, but two is better, as long as the second tier is not overwhelming 
+- Single view should focus only on a single task",-Does the launcher group similar functions in one place?,- Do not have a deep hierarchy and group information into meaningful categories,"-Add a heading for every new thought or topic in your content (for example, a travel article may have headings to indicate the distinct sections on dining, transportation, and lodging).","-Group commonly used menu items together
+- avoid one page does it all approach
+-Categorise content semantically into short categories
+- The user interface should be the simplest possible: grouping items and functionalities by proximity would help users who have no past experience in finding every function 
+- Give each page and frame a title
+- Allow tasks to be accomplished serially, don't force them to be done at the same time requiring cognitive switching.
+- Provide shallow menus. Spread functionality across menu bar and pages.
+- Avoid deep hierarchy
+-  task should be done serially. Do not clutter them into one space                                                                                                                                                                                                                                                                                                                                                                                                                                                             ",13,y,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,y,38,-,-,-,-,13,-,-,59,-,-,-,-,-,-,132,262,30,236,16,238,58,29,301,58,,,,,,,,,,
+16,Is overall design consistent?,"- Ensure screen design (e.g., button placement, color use, element placement, appearance,...) remains consistent throughout the system 
+
+-Icon & images and general look and feel should not abruptly change between views.","- Does the launcher apply consistent format?
+- Are items placed in a recognizable positions?","-Screen layout, navigation and terminology used should be simple, 
+clear and consistent
+- Reduce the demand on working memory by supporting recognition 
+rather than recall and provide fewer choices to the user",-Logical order,"-Make the device consistent with familiar layouts
+- Keep the same positioning of the elements in the interface and in their respective operations;
+- Do not use wide space between related information: When related information is shown on the screen, this information should be shown closer on the page in order to make this relationship visual too.
+-Be consistent with details of interface. Using different designs between screens can cause frustration and confusion.
+- Design appealing to all. Familiar design features were used, institutional appearance was avoided
+-Ensure that navigation is consistent throughout the website or application e.g., similar fonts, colors and sizes, the use of the same set of buttons menu in the same place on each screen, the use the same symbols and icons throughout the website/ application, consistent hyperlinks",14,y,n,n,y,n,n,n,n,n,y,y,n,n,n,n,n,n,n,n,n,y,33,34,-,-,-,22,41,-,17,-,-,-,-,-,-,74,265,205,313,224,226,59,202,298,,,,,,,,,,,
+17,User can adapt the size of elements easily?,"- Web browsers have a built in zoom. Using the zoom should not break elements shown
+- Users might want to enlarge only a single element (image, text, etc)
+- Ensure that enlarging a view does not break the view 
+- Provide font size customization in the system settings
+",-Is there any option to enlarge the font size,-,"
+    Provide a tool that enables users to select from several background and foreground colours; and
+    Ensure text blocks are no wider than 80 characters (plus make sure resized browser windows do not need horizontal scrolling); and
+    Ensure text is not justified to both sides of the webpage; and
+    Line spacing is at least space-and-a-half within paragraphs and paragraph spacing is at least 1.5 times larger than line spacing
+    Ensure text can be resized in a browser up to 200% without requiring the user to scroll horizontally
+","-For web interfaces, the solution could be an assistant functionality that makes it possible for uses to adjust the font size themselves
+-give the option to increase and decrease size, so that users with visual impairments can also interact with the tool
+-Support the ability to adjust fonts and size of elements are some of the requirements that the application should have.
+-Ensure the user can easily make interface elements larger
+-Automatic increasing of text size for specific users if text smaller than 14px
+- Change the color and increase the size of the header and content, or give the option to increase and decrease size
+- Allow users adjust font type, color scheme (background color, text color, and printing colors), and text size at their will",10,n,y,n,y,n,n,y,y,y,y,n,y,n,n,n,n,n,n,n,y,n,2,-,-,-,-,-,-,-,31,50,-,-,-,-,-,93,95,101,363,90,93,394,,,,,,,,,,,,,
+18,"On touchscreen devices, no complex gestures are used?","- Avoid the use of difficult movements
+- Attempt to handle most functions via simply tapping
+- Dragging is acceptable for elderly users on larger displays ( 42- and 23-inch touch panels)
+- If more complex gestures are absolutely necessary, let the user complete them in middle of the screen if possible",,,,"- Avoid difficult movements e.g., dragging
+- Keep gestures simple to perform basic commands of the system; 
+- Avoid creating multiple gestures that combine more than two fingers and require the use of both hands;
+- Prefer multiple-tap over drag
+- Use drag gesture with parsimony
+- The elderly prefers tabbing but not drag and drop actions
+-Use the drag operation for the best elderly’s performance on the 42- and 23-in. touch panels, but not for the 4.3-in. touch panel.
+-In the middle of the screen neither of the interaction techniques – Tapping, Crossing, or Directional Gesturing – was revealed as significantly more accurate
+- Use the swipe gesture, preferably without activation speed",10,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,323,335,334,328,329,337,338,146,155,330,,,,,,,,,,
+19,"User confirmation on all major steps (submit, delete, login/out, etc) is required?",Always ask confirmation from the user for any major step,-Is there confirmation message for critical actions such as deletion?,-,-,?),10,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,y,n,n,44,26,-,-,-,-,-,-,66,-,-,-,-,-,-,34,204,206,215,229,307,307,,,,,,,,,,,,,
+20, Scrolling for information is avoided?,"Avoid that the user need to scroll while reading information or performing a task.
+When using scrolling, horizontal scrolling seems to be faster for shorter scrolling tasks, while for longer scrolling tasks, vertical scrolling yielded better performance. ",-,-,"-    Vertical content doesn’t require a horizontal scroll at a width of 320 CSS pixels
+    Horizontal content doesn’t require a vertical scroll at a height of 256 CCC pixels","- Avoid scrolling and requiring double click
+- Features such as double tapping and scroll bars should be avoided for touch screen use
+- Asking the elder to perform acts like ‘scroll down’ to expose the status/notification screen may be incomprehensible and lead to frustration and abandonment.
+- (if using scrolling)  For shorter scrolling tasks, horizontal scrolling was faster; however, for longer scrolling tasks, vertical scrolling yielded better performance. 
+- Avoid using scroll",9,n,n,n,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,y,n,y,-,-,-,-,-,36,15,12,33,,,,-,-,-,3,5,24,67,326,,,,,,,,,,,,,,,
+21,No overly decorative fonts are used?,"Sans serif fonts are recommended for screens or fonts optimized from screen use, such as:
+Helvetica, Arial, Verdana, Tahoma, or Times New Roman
+",-,"san serif type font Helvetica, Arial",,"- Plain font should be chosen. 
+- In general, sans serif fonts provide a good readability
+- Information was displayed in sans serif
+-Sans-serif fonts are
+suggested
+- Avoid decorative fonts type
+- Use serif or sansserif  font type (Helvetia, Arial, Times New Roman…). Avoid decorative fonts. Recommended: Helvetia, Arial, Times New Roman…
+- Utilize a sans-serif font type e.g., Arial, Helvetica, Verdana and Tahoma
+- Avoid the use of the shadow effect",9,y,n,n,y,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,41,-,-,-,-,-,-,-,-,-,357,91,92,377,48,417,392,382,,,,,,,,,,,,
+22,Text format & presentation is clear?,"- Use left aligned for text
+- Preferablly only use underline for links
+- Avoid using capitals letters outside their normal use in sentences.
+- Use white space to clearly separate elements and text",-,-,,"-...terms and/or icons that users will recognise
+- Legible displays are better than fancy displays. Size, style, and color of fonts and displays make an enormous difference in the readability of the interface design.
+- Use white space
+- Use lower cases to write the main body
+- Use left alignment
+- Avoid justified aligned text
+- Centre justify important text to highlight it.
+- Underline only links",9,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,,-,-,-,-,-,-,-,-,-,99,92,391,388,389,378,77,257,304,,,,,,,,,,,
+23,"For vocal feedback, human voice is used?","- For vocal feedback use normal human voice
+- Allow user to choose the voice type/gender",-,-,-,"- Let the user to know what he/she can do. Provide audio instructions of a human voice describing the options set to the user.
+- Use female/child voice only to draw attention.
+- Use automatic inputs as possible
+- Use male voices
+- Use natural speech than synthetic speech
+-Use active voice rather than passive voice
+- Use a natural voice in audio output, to promote understanding and motivation.",9,n,n,n,y,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,203,32,31,281,346,347,279,44,226,,,,,,,,,,,
+24,"On touchscreen devices, magnifying a view is easy?","- Avoid requiring two hands to magnify the view, except for large displays (42- and 23-inch). 
+
+- Depending on the device's OS, it may be easier to offer zooming via buttons on the screen",-,-,-,"-Do not use two hands for the enlargement operation for odler adults for touch panel sizes, which are not  42- and 23-in., and magnification cases.
+- For the one-hand enlargement operation of the scale task the elderly’s performance was significantly the worst for most of the touch panel sizes, except for the two times enlargement operation using one hand on the 23-in. and 42-in. touch panels, for the four times enlargement operation using one hand on the 23-in. and 42-in. touch panels, and for the eight times enlargement operation using one hand on the 23-in. touch panel.
+-While increasing target size is the most straightforward solution for reducing error rates, it is not always practical for small screen devices. An alternate approach might be using a zooming interface [1 (rather than sticky interface that are used in accessible pen based interfaces).
+-For the elderly, use two times magnification for enlargement operations using one hand or both hands on a 23-in. touch panel. For the enlargement operation using one hand on a 42-in. touch panel, also use two times magnification.
+-According to the comparison of the performances on the two times, four times, and eight times magnifications, consider that  magnification has a significant effect on the elderly’s enlargement operation using one hand or two hands on a 23-in. touch panel and on the enlargement operation using two hands on a 42-in. touch panel.
+-Consider that the size factor has a significant effect on the elderly’s performance on the four times enlargement operation using one or two hands. The elderly’s performance on the four times enlargement operation using one hand and two hand was best on the 23-in. and 42-in. touch panel. Based on the test results, use 23-in. and 42-in. touch panels for the elderly for the four times enlargement operation using one hand or two hands, but not 10.1-in. and 4.3-in. touch panels for the elderly for the four times enlargement operation using one hand or two hands.",9,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,144,145,418,426,121,142,143,395,415,,,,,,,,,,,
+25,"Always a way out/back/exit/undo is provided (such as for submitted forms, including for mistakes) ?",User can always go back and/or exit system,- Does launcher provide emergency exits to leave unwanted point?,-,-,"- The application should allow recovery from errors in the simplest possible way.
+- Provide a way to exit on every screen
+- Always provide a ‘home’ button, and let users know ‘where’ they are.
+- I can easily reverse my actions if I make a mistake in using this application.
+- Easy reversal of actions. Review page provided easy reversal of actions.
+- Provide “undo” or “back” button to help users recover if lose
+- Maintain a ""return"" function apparent on the interface
+- Provide “undo” or “back” button to help users recover if lose",9,y,n,n,y,n,n,n,n,n,n,n,n,y,y,y,n,n,n,n,n,n,42,-,-,-,-,47,-,-,-,-,-,-,-,-,-,18,4,57,201,220,210,205,,,,,,,,,,,,,
+26,"On touchscreen devices, keypad conforms to the needs of the user?","- A narrower spacebar might be useful for some use cases
+- Allow customizing keyboard layout
+- Tracking the touchpoint for keys can help mitigating input mistakes",,,,"- Narrower spacebar. Results of touch deviations suggest that spacebar should be narrower. Reducing its size has the potential to diminish substitution errors. We recommend a spacebar extending from middle of C to middle of B for both devices.
+- Shift keyboard layout. Elderly participants theoretically benefit from a layout shift in the bottom-right direction as most substitution errors occur in this direction. This finding may be related to hand dominance, thus further research should explore this hypothesis. 
+- Compensate hand tremor. Future keyboards should adapt to users’ hand tremor characteristics. Results showed large correlations between tremor measures and input accuracy, namely when considering substitution errors. Taking advantage of current mobile sensing capabilities, future solutions should trace users’ tremor profile to compensate typing errors.
+- Shift the touch points to the top and to the opposite side of the hand the user is using to type... Conversely, users who only used their left hand benefit with a top-right shift of their touch points. Users who interacted with both hands will, hypothetically, benefit with a top-left shift of the touch points performed on the right side of the keyboar
+-Therefore provide an adaptive model that constantly updates the center of each individual key.
+- Smartphones that do not have a physical Qwerty should provide voice and shape-writing recognition input as standard options and alternatives to onscreen Qwerty
+-Insert tactile marks on base keys on virtual keyboards to facilitate the location of other keys",8,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,107,108,109,111,113,122,128,367,,,,,,,,,,,,
+27,Color is never the only vessel of information?,"- Never inform user of something by using only colour 
+- Supplement color as information tool with other means, such as: sound, haptic, ot text feedback",,"- Content should not all be in colour alone (colour here is denoted by all colours other than black and white)","Ensure no instructions rely on colour alone
+Ensure that no information (like charts and graphs) relies on colour alone","- Don't use colours to convey critical information (for people blind to colours). They can be used if they are combined with other signalling (icons, symbols …)
+- Grouping menus by colour alone can also lead to difficulties. Instead it would be preferable to use text, spacing or frames.
+- It is also recommended that colour is used to group items together and provide activity feedback but that it should be used sparingly and with colour blind users in mind.
+- Avoid utilising too much color
+- Some chat applications might use shapes and colours to
+improve the interface. However, the use of these shapes
+and colours should not be used to convey information.
+These methods must be combined with other clues so as to
+not discriminate users with visual impairments",7,y,n,n,y,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,34,-,-,8,-,-,-,-,-,-,186,190,191,242,360,,,,,,,,,,,,,,,
+28,Main navigation links are consistently available?,"Navigation menu or options (if only limited number) should always be visibile and in a consistent way, i.e. use same icon/color/style/text and never change location",-Does the main navigation menu exist consistently in all pages?,"-Screen layout, navigation and terminology used should be simple, 
+clear and consistent
+- Clear navigation should be provided
+- Reduce the demand on working memory by supporting recognition  rather than recall and provide fewer choices to the user",-,"-  The basic navigation structure should remain consistent throughout the whole application.
+Most internet services place the main menu on the left-hand side of the page, key elements like login, search and customer support functionality are placed on the top of a page. Users are used to this arrangements.
+- Make the navigation menu visible all the time
+-- The main navigation should be placed identically on all “pages”",7,y,n,n,y,n,n,n,n,n,y,n,n,y,n,n,n,n,n,n,n,y,40,-,-,-,-,22,41,-,38,-,-,-,-,-,-,35,209,315,,,,,,,,,,,,,,,,,
+29,Text input fields assist/cater for spelling mistakes?,Provide autocorrection functionality,- Does the graphical interface design and the organization help prevent errors?,"-Search engines should cater for spelling errors
+-Reduce the risk of input errors for sensitive data",-,"- Use automatic inputs as possible
+- Use language-based correctors
+- Use spelling checker in input and search fields
+-As the text input for motor-impaired people is slow, prediction is popular
+technique to improve the text entry rate.",7,n,n,n,y,n,n,y,n,n,n,n,n,n,y,y,n,n,n,n,n,n,43,-,-,-,-,43,-,-,41,-,-,-,-,-,-,275,110,208,319,,,,,,,,,,,,,,,,
+30,User knows their current location in the system?,"Make sure the user knows where he is in the system, e.g. by using breadcrumb",- Does the elderly know where is he and what can he do next?,-Provide location of the current page,-Let users know where they are,"- Provide a site map
+- Always provide a ‘home’ button, and let users know ‘where’ they are.
+- Show the actual location all the time
+- Provide clear information of current location at all times",7,y,n,n,y,n,n,n,n,n,y,n,n,y,n,n,n,n,n,n,n,n,30,-,-,-,-,11,-,-,57,-,-,-,-,-,-,212,57,211,310,,,,,,,,,,,,,,,,
+31,Icon or image purpose is clear and easily recognized by the user?,"- Only use icons/images that are easily identifiable, also to elderly users with low vision
+- Ensure that the target users know the icon's meaning
+- Enhance icon clarity with labels ",- Are the icons familiar to the elderly?,-Icons should be simple and meaningful,-,"-...terms and/or icons that users will recognise
+-‘Standard’ icons may be unfamiliar –use with care or better reinforce with words.
+- Show users what actions are possible and what will result from those actions. Transparent systems are easier to use. Making features distinguishable causes the display to be more user-friendly. Such features include icon size and style, and system functions. Some programs show the name and a brief explanation of each icon’s functions when hovering over the icon.
+- Find representative words and icons. Use common words or icons or check with final users if they mean what you expect.
+-  icons should avoid both ambiguous and explicit affordances.",7,y,n,n,y,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,21,-,-,-,-,7,,-,-,-,-,-,-,-,-,99,6,36,46,53,,,,,,,,,,,,,,,
+32,"Functionality of interactable elements (buttons, etc) is consistent throughout the system?","- The same action should be activated with the interactable element in any part of the system), includes gestures.
+- Any variation in function behavior requires additional interactable elements
+- The action flow should be consistent, for example: do something-confirm-proceed","-Are items usage is the same from section to section within the launcher?
+-Does clickgin the back buttons always go back to previous page that elderly comes from?",-,,"- links must provide a description of their purpose and must be unique in the website
+- Provide reusable commands and gestures to ensure consistent interactions across applications and functions
+-  Always associate the main functions of applications with the same location of the touch screen, such as on one of the four corners 
+- Ensure that navigation is consistent throughout the website or application e.g., similar fonts, colors and sizes, the use of the same set of buttons menu in the same place on each screen, the use the same symbols and icons throughout the website/ application, consistent hyperlinks
+-  to proceed towards the next step. In addition, a way to decrease the strain on cognitive performance is to place tasks in a step-by-step order",8,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,32,41,,-,-,-,-,-,-,-,-,-,-,-,-,359,131,297,298,226,261,,,,,,,,,,,,,,
+33,Inputting data by typing is avoided?,"- User should only be asked to type information that cannot be given in any other format, such as email address.
+- In general limit the amount of input required in any single view. For instance, split account making into different steps
+- Try to ""pre fill"" data for user as much as possible or provide other ways to input data such as menu, selection lists, radio buttons, 
+- Speech to text is still fiddly, but could be allowed depending on system; inputting data by recording audio or video is another valid option
+- For touchscreen devices: bluetooth keyboards can be a more novel option in specific situations",-Does the graphical interface design and the organization help prevent errors?,"-Reduce the demand on working memory by supporting recognition 
+rather than recall and provide fewer choices to the user",-,"- Avoid use of keypad in smartphones. Replace with drop down menus, choices or speech-to-text.
+- Data entry should be kept to a minimum, however if possible, other options could be offered, such as clicking on predefined values, providing buttons or sliders for increment and decrement values or lastly using a physical keypad or keyboard
+- Use automatic inputs as possible
+- Reduce the need for keyboarding e.g., selecting choices from a dropdown list
+- Provide a facile way to enter characters that need pressing at the same time two keys such as ‘@’ and ‘€’
+- Allow for alternative forms of input. There should be options for alternative input methods (e.g., keyboard, mouse, voice) when tactile input is more difficult than such alternatives. It can be difficult to manipulate something a user cannot see. Sometimes a user’s hands can occlude necessary information on the screen. Enabling alternative input methods can alleviate such an issue. Older adult users tend to feel more comfortable with multiple input options, even if they do not use them.’",9,y,y,n,y,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,11,,-,-,-,41,43,-,-,-,-,-,-,-,-,159,127,275,320,321,65,,,,,,,,,,,,,,
+34,Large information chunks are divided and made easy to navigate via familiar means?,Divide any larger pieces of information into smaller chuncks and add navigational aids if needed,-Does the graphical interface design and the organization help prevent errors?,"- Reduce the demand on working memory by supporting recognition 
+rather than recall and provide fewer choices to the user",-,"- Other options to view an extended screen could be incorporating next/previous or up/down buttons....  Familiar gestures such as using a finger or stylus in a crossing off motion (X) to delete an item or ticking () to save an item are particularly compatible for older users learning this input strateg
+- information needs to be divided into smaller, discrete chunks 
+- Guided linear or random access structure that matches the audio interface were provided, the piece-by-piece process broke down a complex task into several easy-to-complete subtasks to reduce complexity, visual clusters were removed, and multiple contest pages on one screen were avoided.
+-Ascertain that the minimum possible clicks are needed to do a given instruction
+-Implement interfaces that put minimal load on Working Memory for older people. For example, avoid nested (multi-layered) interfaces; use multi-modal interfaces that use both visual and phonological resources",7,y,n,n,y,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,y,n,43,-,-,-,-,41,-,-,-,-,-,-,-,-,-,25,262,227,322,62,,,,,,,,,,,,,,,
+35,"Error/confirmation messages are clear, simple and do not blame the user?","- Place no blame on the user
+- The issue at hand should be clear, ideally explained as compact as possible, without becoming vague or counterproductive","- Are error messages descriptive, and did they provide a solution to the elderly for recovery?
+- Are confirmation messages clear?",-Error messages should be simple and easy to follow,-,"-Ensure that error feedback messages make it clear that the user is not the cause of the problem
+-Use short feedback messages
+- Older adults have been shown to learn more effectively when provided positive rather than negative feedback
+-positive feedback icon was considered a motivator by users and an important indicator that they were making progress",7,y,n,n,y,n,n,n,n,n,n,n,n,n,y,y,n,n,y,n,n,n,24,25,-,-,-,48,-,-,-,-,-,-,-,-,-,217,309,20,21,,,,,,,,,,,,,,,,
+36,"If required, the application recognices cognitive disability? ","If needed, provide multiple versions of a system specifically intended for users with a cognitive disability",-,-,"-
+    Provide an extended audio described version of a video’s soundtrack, selectable by the user; or
+    Provide an alternative version of your video with extended audio description.
+","- the UI is split being divided each task in a different UI AND it is generated multimodal container of the type redundancy (text, images and vocal output) in each UI providing the table of contents for each UI AND it is generated other UI providing a site map of the application
+- providing multimodal interaction to accommodate users’ social, physical and intellectual differences.
+- Users with dyslexia or autism performed better when they used simpler interfaces while users with learning disabilities performed better with richer multimedia interfaces.
+-  Event: the user accesses an application with many interaction  elements. Condition: the user is blindAction: a table of content is created to easily access each interaction element.
+- Provide all information for a given need on one page",7,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,13,-,-,45,-,-,-,-,-,-,228,124,150,364,60,,,,,,,,,,,,,,,
+37,The system confirms the finishing of a major step?,Always confirm that a major step or action the user has made (e.g. deleting or submitting a file) was successfully (or not) completed,"- Does the launcher keep elderly informe about what is going on, through appropriate feedback?",-,-,"- Applications should continuously provide easily recognizable feedback of success or failure with every action.
+- I am able to tell that I have successfully completed an action in this app.
+- Provide event-based reminders
+-Give feedback after every action
+- Provide a confirmation of every completed function",7,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,26,-,-,-,-,-,-,-,66,-,-,-,-,-,-,219,225,305,308,176,,,,,,,,,,,,,,,
+38,"If multimodal content is used, 
+can the user control/customize it (volume, fast forward, etc) ?",Video and audio tracks should have basic controls,-,-,-,"- if audio is played, allow changing volume
+-  Make the ability to stop sound feedback available at any time to move to the next function                    
+- Enable users to control the volume themselves
+- Enable users to replay auditory messages
+- Enable user to adjust the speed of the audio background      
+- Enable users to skip the audio background                                                                                                                                                                 
+- Implement a volume control of the voice technology for the visually impaired who are also hearing impaired.",7,y,n,n,y,y,n,n,n,n,n,n,y,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,134,137,351,349,350,341,166,,,,,,,,,,,,,
+39,All input fields and information fields are labeled clearly without breaking aesthetics?,"- All input fiels and information fields should be labeled clearly without breaking aesthetics
+- They should be distinguishable from other clickable items",-,-,"-
+    Label all input fields clearly and helpfully.
+    Where a field needs a specific format, give an example (For example, for a ‘date’ field in a form you might use ‘Enter the date as dd/mm/yyyy’)
+    Mark required fields with an icon and explain what the icon means before the form.
+    Keep your labels simple – too much explanation can be counter-productive. Things like ‘First name’, ‘Email’ and ‘Your message’ are fine.
+    The same goes for instructions, ‘Required fields are in red and have a * symbol’ works great. So does ‘Fill in this form and click ‘Submit’ to get in touch’.
+-
+    Use informative headings and subheadings where appropriate (a change in topic or purpose) to aid navigation through your content.
+    Label all elements (for example, sidebar widgets, forms, search boxes, tables).
+","- Make the labels bolder and more visible, but only if design is acceptable from an aesthetic point of view
+- Use labeled icons",6,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,y,y,n,n,n,8,7,-,-,-,-,-,-,23,35,-,-,-,-,-,83,420,,,,,,,,,,,,,,,,,,
+40,Element placement is consistent ?,"- No element moves when the system is being used
+- If application is redesigned, ensure user is sufficiently informed
+- Elements should be placed in a consistent way throughout the application",-,-,"-Use icons and buttons consistently
+- Use menus consistently","- Show important information at the top
+- When designing the interface you need to consider what you want the user to see, for example, being consistent when grouping elements to aid navigation and eliminating extraneous features so the screen is not cluttered
+- The basic navigation structure should remain consistent throughout the whole application
+- Display main information on the center of the screen",6,y,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,y,-,-,-,-,-,-,-,-,39,38,-,-,-,-,-,355,43,35,250,,,,,,,,,,,,,,,,
+41,Navigation elements' purpose is clear?,"- The destination or purpose of navigational elements should be clear to the user, e.g. marking navigation links bold and underlining and showing their destination when hovering
+- It should be clearly indicated when navigation links are directing away from current system
+",- Are the any visual cues in the launcher that helps the elderly know there is more content in a page?,"- Clear navigation should be provided
+- Extra and bolder navigation cues should be provided","-Every link’s purpose is clear from its text
+
+    This Guideline builds on Guideline 18 (WCAG)) by focusing only on the link text and removing some exceptions.
+    Ensure that links with the same destination have the same description (but links don’t share a description if they point to different places).
+    ‘Click here’ and ‘Read more’ links fail this guideline.
+    Avoid using the title attribute (which was an exception in Guideline 18 (WCAG)) as is not sufficient to pass this guideline.
+
+-Every link’s purpose is clear from its context
+
+    The purpose of the link is clear from the link text (for example, ‘My blog’); or
+    The purpose of the link is clear from the surrounding content, meaning the same sentence, paragraph or cell in a table (for example, ‘Visit my blog’ ); or
+    If the link is an image, the alt text of the image makes the link purpose clear (for example, ‘Luke McGrath – Visit my blog’); and
+    Links with the same destination have the same description (but links don’t share a description if they point to different places).
+","-Provide descriptive links e.g., do not use “click here”",6,y,n,n,y,n,n,n,n,n,n,n,n,y,n,n,n,n,n,y,n,n,12,-,-,-,-,9,10,,58,18,-,-,-,-,-,233,,,,,,,,,,,,,,,,,,,
+42,Is there enough space between text lines?,"- All text should have sufficient space between lines
+- Paragraphs should be split by white space
+- Do not use narrow columns of text 
+- Provide appropriate spacing between word (no too little, not too much) ",-,-,-,"- One qualitative and two controlled trials found that performance of users with ADHD and dyslexia improved when texts were displayed with extra space
+- Put a space to separate between paragraphs
+- Put a spacing line between paragraphs
+- Avoid narrow columns
+- Ensure that the spacing between lines is from 1,5 to 2
+- Provide larger distance between words",6,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,41,243,244,381,383,385,,,,,,,,,,,,,,
+43,Link placement and presentation is clear?,"- If aesthetically possible, show links in a bulleted list 
+- In a sentence, only add links to the beginning or end of the sentence
+- Cluster links into a meaningful group (navigation panel)",-,-Links should be in a bulleted list and not tightly clustered,-,"- Name links in a bulleted list
+- Every interactive element must properly describe their purpose for assistive technology users.
+- Use links only at the end or at the beginning of the sentence
+- Increment the size of the zone round an hyperlink",6,y,n,n,y,n,n,n,n,n,y,n,n,y,n,n,n,n,n,n,n,y,-,-,-,-,-,26,-,-,-,-,-,-,-,-,-,232,270,359,399,427,,,,,,,,,,,,,,,
+44,Interface can be provided vocally to user?,"Either support screen readers, or another assistive system 
+reading tool or provide a vocal alternative for the visual interface",,,,"- Make menu lists divided into morphemic units (broken into pieces), heard, and read back to the user
+- Support system status determination with voice activation
+- Provide an audio supported menus;
+- Implement interfaces that put minimal load on Working Memory for older people. For example, avoid nested (multi-layered) interfaces; use multi-modal interfaces that use both visual and phonological resources.
+- Event: onFocus over a link that opens a new window
+Condition: the user is blind
+Action: provide a vocal message to inform that this link will open a new window",6,n,n,n,y,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,173,181,317,434,62,361,,,,,,,,,,,,,,
+45,"Are all audio content, sound/speech feedback/instructions clear?","Ensure that any audio content is clear, in terms of language, messages and expressions used and that no background noise affects it.",-,-,"- (live content)
+
+    Add captions to live audio; or
+    If the live broadcast is from a prepared script, make the script text available from near the original content.
+-
+    Make sure your pre-recorded audio doesn’t contain any background noise; or
+    If there has to be some background noise, it’s generally 20 decibels lower than the foreground noise. That’s about four times quieter.
+","- Increase the duration of the sound beeps
+-Make a pause of some seconds after each spoken sentence
+- Reduce the speed of the auditory background
+- Utilize, by default, higher volume for delivering the auditory background",6,y,n,n,y,y,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,47,49,-,-,-,-,-,343,344,345,348,,,,,,,,,,,,,,,,
+46,Navigating in the system is easy?,"If multiple paths are possible, explain differences between them",- Does the elderly know where is he and what can he do next?,"-Screen layout, navigation and terminology used should be simple, 
+clear and consistent
+- Provide a site map","Add a ‘Skip to Content’ link to all pages on your website. It’s best if you make the link visible.
+
+The easiest way to add a ‘Skip to Content’ link to your website is to use of a great piece of code from the guys on the PayPal Accessibility Team. 
+They produced something called ‘SkipTo’, which adds a link for you. Best of all if you’re using WordPress or Drupal, there are plugins you can use. (source. WUHCAG)
+-
+    Adding an HTML sitemap page (which links to every page on your website) and link to it after the ‘Skip to Content’ link from Guideline 15(WCAG); and
+    Including a search function on every page (by adding it to the header); and
+    Providing a clear and consistent main navigation menu.
+","-Provide an index bar to navigate to an entry in a list, place the bar on the left edge of the screen for right-handed users. If this design is not acceptable from an aesthetic point of view, the index bar may be better off being removed altogether.",6,y,n,n,y,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,30,-,-,-,-,22,45,-,15,34,-,-,-,-,-,33,,,,,,,,,,,,,,,,,,,
+47,Error/confirmation messages clearly state how to solve the issue?,When indicating an error also provide a solution. For confirmation indicate the consequences of the confirmation,"-Are error messages descriptive, and did they provide a solution to the elderly for recovery?
+- Is the elderly aware when the launcher turns off or gets an error that causes it to stop working?",-,-Suggest fixes when users make errors,"-  The application should allow recovery from errors in the simplest possible way.
+- Ensure that error messages feedback provide mechanisms for resolving the error",6,y,n,n,y,n,n,n,n,n,n,n,n,n,y,y,n,n,y,n,n,n,24,31,-,-,-,-,-,-,40,-,-,-,-,-,-,18,218,291,,,,,,,,,,,,,,,,,
+48,On touchscreen devices clickable items are easy to click?,"- Button placements should be customizable to the dominant hand
+- Ensure that core buttons are within easy reach of thumb when device held in one hand",- Do the items in the elderly interface fit the natural posture of the hand and finger?,-,-,"- For an amplitude of movement of 400 mm we recommend a motion angle of 90° as the lowest error rates occur between 90° and 180° and coevally (in this interval) the movement time is lowest for 90°. Whereas for a smaller amplitude (200 mm) an angle between 20°-40° should be preferred as the error rate remain
+- Future designs should focus on model users typing patterns by analyzing touch features (e.g. x and y touch position, distance traveled during touch, key press duration, between keys duration etc.) and therefore increase typing accuracy
+- inputs were made usable for right- or left-handed older adults by putting the navigation and touch buttons in places that were in natural locations that were easy to reach with either left of right fingers.",5,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,35,-,-,-,-,-,-,-,-,-,-,-,-,-,-,431,106,118,316,,,,,,,,,,,,,,,,
+49,"User can customize how (sound/text/audio only, or specific combination) or when feedback is given? ",User can easily turn on or off any form of feedback given,-Is there an option to enable them? (auth. note them = audio/haptic feedback),-,-,"- haptic and audio feedback that the user can enable through settings to augment or completely replace the visual feedback
+-  Provide a possibility to turn off the sound feedback
+- Enable manual or automatic settings for the method of feedback to the user 
+- Include both feedback and non-feedback modes, for use in treatment and clinical assessment respectively. Feedback on correct/incorrect responses was conveyed with a happy/sad face accompanied by a voice message.",5,n,n,n,y,n,n,n,n,n,n,n,y,n,n,y,n,n,n,n,n,n,23,-,-,-,-,-,-,-,-,-,-,-,-,-,-,87,138,371,153,,,,,,,,,,,,,,,,
+50,Text is kept short?,"- Keep any written text as short as possible
+- One paragraph, one idea ",-,-,-,"- ...keep written information and other visual distractions to a minimum.
+- Universal and recognizable icons were used for text size, audio speed, and contrast; simple Y for Yes, N for No, and I for instructions (auth. note. this goes against other guidelines, such as avoiding abbreviations)
+- Express only one idea per paragraph
+- Provide short paragraphs
+- Avoid lengthy lines of text (more than about 70 characters per line)",5,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,152,272,282,303,380,,,,,,,,,,,,,,,
+51,"If required, system supports gaze & speech input?","If required:
+- Support keyboard gazing input
+- Support vocal input (speech to text) ",,,,"-Make an identification of the status of all locking or toggle controls or keys accessible visually as well as by touch
+- Scanning ambiguous keyboards shows
+the best performance among the scanning text input.
+-Utilize the speech-to-text or dictation mode for typing
+- Use acoustic models dedicated to seniors for the speech recognizer",5,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,164,170,318,207,339,,,,,,,,,,,,,,,
+52,Use of voice commands is easy?,System recognizes basic commands,,,"-2  Provide a text transcript that conveys the same information as audio-only media;
+    Provide a text transcript that conveys the same information as video-only media; or
+    Provide an audio-track that conveys the same information as video-only media.","-Allow alternative forms of activation of the voice command, such as physical buttons
+-Allow recognition of multiple voice commands at a time
+-Allow universal control of the device rather than only of a few applications
+- Provide alternatives to voice command in situations that require privacy
+-Recognize voice in different languages, accents and intonations",5,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,372,373,374,375,376,,,,,,,,,,,,,,,
+53,Is there text alternative to all non-text content?,"- All non-text information has a text alternative
+- Users with hearing difficulties might benefit from captioned videos, 
+or alternatively from a transcript of the video content",-,-,"-1 
+ 
+    Add a text alternative to your images describing the image
+    For video and audio, add a short description of the media but ideally provide a transcript
+    Where a control or input field is non-text, add a name
+-46
+    Provide a full text transcript for your video and link to it from near the original content","-Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.
+- Make sure that images and icons have an alternative text (alt attribute)
+- Provide text alternatives for non-text content that serves the same purpose.
+--- Event: the noise of the environment changes to a value higher than 25 decibels
+Condition: the user has a mild deafness disability
+Action: every video has to be changed to a video with subtitles",7,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,1,46,3,28,-,-,-,187,287,340,,,,,,,,,,,,,,,,,
+54,Can the system be controlled with a keyboard?,"Clean html & css website is easier for keyboard tools to handle
+ensure navigation works on all pages & elements are highlighted under focus
+",-,-,"-
+   A clean HTML and CSS website will often have keyboard accessibility without further work – a great example of why you need to invest in web design and development from the outset
+-
+
+    Test your website to make sure you can navigate away from, as well as to, all parts of your website by keyboard only.
+    Make sure all navigation is controllable by either the ‘Tab’ or arrow keys, which is a standard many people are familiar with.
+-
+    Use CSS to apply a visual aid to keyboard focus – a border and/or underline is best.
+",,6,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,10,11,36,52,3,28,-,-,,,,,,,,,,,,,,,,,,,
+55,"Customizable background, font & color?","- Provide contrast customization from the settings
+- For desktop browsers, provide an easy way to the appropriate browser extensions or settings",-,-,,"- In addition, users with dyslexia also benefitted from personally preferred fonts and colors
+- Change the color and increase the size of the header and content, or give the option to increase and decrease size
+- Allow users adjust font type, color scheme (background color, text color, and printing colors), and text size at their will",4,n,n,n,y,n,n,n,y,n,n,y,y,n,n,n,n,n,n,n,n,n,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-,41,93,394,,,,,,,,,,,,,,,,,
+56,Clickable items do not require double clicking?,Do not require user to double click,-,-,,"- Use Single Touch if there is a need of including all types of older users
+- Avoid scrolling and requiring double click
+- Features such as double tapping and scroll bars should be avoided for touch screen use
+- Use single mouse clicks",4,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,24,324,130,,,,,,,,,,,,,,,,
+57,Are the core functions available in a view always clearly identifiable for the user? ,"- Core functions should be labeled
+- They should be easy to spot when scanning a view
+- Their purpose should be clear: what, how & why?",-,-,-,"- give clear evidence to active areas so that users can locate them more easily
+- Simple display designs are key. Simplified displays facilitate usability for older users whose reduced attention skills hinder their ability to focus when there is unnecessary or extraneous information present.
+-where possible all menu items should be displayed on the one page. Waloszek (2000) advises that different menu groups (e.g. main menu and secondary menu) should be differentiated by their shape and style
+-Different participants (A8, A19, B2) stated that navigation is particularly difficult for them when the menu structure has too many subcategories. Two layers are found comfortable, more are difficult to handle",4,y,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,n,y,n,n,y,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,16,38,42,35,,,,,,,,,,,,,,,,
+58,Keypad on touchscreen devices is split between text & numbers? ,"- Only show buttons relevant for current input. Note that most touchscreen devices already do this, if input field is correctly encoded
+ ",- Is the keypad separated into numbers and letters for data entry?,-,-,"- Separate keypads for numbers and letters
+- In case of virtual keyboards on small screens, split the alphabet into several sections or menus",4,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,10,-,-,-,-,-,-,-,-,-,-,-,,,,230,269,366,,,,,,,,,,,,,,,,,
+59,Interactable elements give a clear indication of being interactable and their purpose?,"- It should be clear from its appearance when the user can use an element for interaction. For instance, highlighting buttons with a border, or traditional rectangular buttons are recommended as these are common 
+- Any button or otherwise interactable element should be labeled to state its purpose
+- The interactable element can be an icon or image, but it must always be used solely for this purpose
+","-Is it obvious which item is clickable and which is not?
+- Is the image on a button or an icon easy to predict what does it do?
+- Are buttons large enough to easily see the image or text on them?
+- Are the icons familiar to the elderly?",-,-,"- give clear evidence to active areas so that users can locate them more easily;
+- Every interactive element must properly describe their purpose for assistive technology users.",8,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,13,18,14,21,-,1,,,-,-,-,-,-,-,-,9,16,359,,,,,,,,,,,,,,,,,
+60,"On touchscreen devices, if gestures are used does the system responds smoothly to them?",Responce to gestures should be fast and smootly,-Do gestures of launcher work correctly and smoothly,-,-,"- Slow down the rate at which virtual objects adjust based on subtle hand movements, particularly during resizing and rotating actions.
+- Make gesture recognition flexible, allowing greater variation in form and execution speed
+- Make the touch screen startable in any position on the screen",4,y,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,29,-,-,-,-,-,-,-,-,-,-,-,-,-,-,163,425,175,,,,,,,,,,,,,,,,,
+61,"If a button is pressed multiple times within a short time period, it is only registered as once click?","Avoid that multiple rapid clicks or taps are register as different events, except for cases where this might be counterintuive 
+(such as increasing numbers, or zooming)",-,-,-,"- Provide an adjustable delay of button response to ensure that multiple touches can be treated as one touch
+-Make it possible to hold they key up to 2 s before the action will repeat 
+- Omit touch interactions that are below a certain threshold 
+- Delay and feedback when pressing a button. The touch screen buttons react too fast.",4,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,158,172,112,64,,,,,,,,,,,,,,,,
+62,User can distinguish between visited & not visited links?,Change color or boldness/color of a visited link,-,- The reader should be able to clearly see which links have been visited and which have not,-,"- Maintain link underlined.
+- Make difference between visited and unvisited hyperlinks
+-Change the color of the visited links",4,y,n,n,y,n,n,n,n,n,n,n,n,y,n,y,n,n,n,y,n,n,-,-,-,-,-,24,-,-,-,-,-,-,-,-,-,295,299,300,,,,,,,,,,,,,,,,,
+63,"On touchscreen devices, are the gestures used taking users with disabilities into account?","- Using gliding for selection, though very situational, might make the task easier for the user
+- Crossing & tapping likely outperform most other gestures
+- For visually impaired users, ensure they understand names of gestures, terms such as ""crossing"" might not be clear",-,-,-,"-Make selections using gliding gestures for direct manipulation
+-Physical disabilities could especially cause problems when interacting with larger touch screens or complicated gestures
+-For the 12 and 17 mm targets, use Crossing and Tapping over Directional Gestures, which are significantly more inaccurate. Even when considering small targets, Gestures do not outperform any of the remaining techniques, thus showing no gain in its usage.
+-Create a standard gesture vocabulary for the visually impaired ",4,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,195,197,198,369,,,,,,,,,,,,,,,,
+64,"If a system has several modes, is the user aware of the one currently active?","- Before changing a mode, ask the user to confirm the mode change with clear information on what is changing
+- After changing mode, give feedback on succesfully doing so and how to revert it, if need be (preferably with undo button included in the feedback)
+- Show clearly, e.g. with a labelled icon, the currently active mode","-Does the graphical interface design and the organization help prevent errors?
+-Provide an indicator of ringing or vibrating mode",-,-,"-If a multi-mode design is needed, provide an explicit feedback about mode-changes and a display of the current mode. The indicators of mode changes should be persistent and large, since the elderly users may fail to notice short alerts or small changes in the look-and-feel.
+-Some elderly users are less likely to notice changes of the modes and can become confused. Avoid multimode interfaces for applications as much as possible.
+",4,y,n,n,y,n,n,n,n,n,y,n,n,n,n,y,n,n,n,n,n,n,43,47,-,-,-,-,-,-,-,-,-,-,-,-,-,84,85,,,,,,,,,,,,,,,,,,
+65,"On mobile devices, answering & making calls is easy?","- Provide shortcuts for answering and making calls, such as making a call directly from a visible number
+- Provide voice activated speed dial
+- Identify the calling person upon receiving the call",-,-,-,"- Make speed or shortcut dialing accessible
+- Provide a voice-activated dialing and text entry
+-Make the touch screen startable in any position on the screen
+-Provide assignable or talking ringtones that identify callers",4,n,y,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,136,178,177,180,,,,,,,,,,,,,,,,
+66,Error/confirmation message clearly states the issue at hand?,Always provide the cause of an error and in case of a confirmation indicate clearly what the user wiill confirm,"-Are error messages descriptive, and did they provide a solution to the elderly for recovery?",-,-Clearly identify input errors,"-One has to be consistent in naming the steps, an example can be to begin a sentence with a verb (e.g. ‘press this button’).",3,y,n,n,y,n,n,n,n,n,n,n,n,n,y,y,n,n,y,n,n,n,24,-,-,-,-,-,-,-,22,-,-,-,-,-,-,261,,,,,,,,,,,,,,,,,,,
+68,"Clear instructions are available for more novel gestures (drag & drop, pinch, etc)?","- User may not remember any novel gesture
+- Ensure instructions are available for any ""complex"" gesture, such as : drag & drop or pinchin are visible always
+- Also some users might make assumptions on how to perform the gesture, provide sufficient feedback for erroneus behaviour",-,-,-,"- provide instructions and clear visual clues to show which gesture invokes which function
+- provide a more explicit cues for interaction to help facilitate initial learning and perhaps subsequent use of the technology. For example, if users do not immediately know whether an object is selectable, dragable, resizable, and/or rotatable, indicating this functionality visually would aid usability
+- Do not reuse or enable for touch interaction  without appropriate adaption existing interfaces due to a different accuracy and touch target size of finger and mouse
+- Rely on familiar aspects of manipulating physical photographs",4,y,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,61,9,55,10,,,,,,,,,,,,,,,,
+69,There are no unnecessary animations or moving elements?,"Avoid unnecessary animations (e..g., animated images, moving text) or moving graphics",-,-No animation should be present,-,"- Avoid animation e.g., animated images, moving text
+- Use static menus, and avoid fly-out or pull-down or dropdown menus",3,y,n,n,y,n,n,n,n,y,y,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,5,-,-,-,-,-,-,-,-,-,241,325,,,,,,,,,,,,,,,,,,
+70,No uncommon symbols or special characters are used?,"Avoid special symbols or numerals, or hyphens",-,-,-,"- Don’t hyphenate words at the end of phrases
+- Avoid abbreviations and symbols
+- Avoid Roman Numerals",3,n,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,278,280,276,,,,,,,,,,,,,,,,,
+71,System allows multimodal interaction (e.g. voice commands)?,"Possibilities are:
+- Speech to text
+- Speech commands
+- Speech menu with volume control
+- Support keyboard gazing input",-,-,-,"- providing multimodal interaction to accommodate users’ social, physical and intellectual differences.
+- Participants could employ a speech-centric multimodal interface to use a map-based information service, while they could neither use text only nor speech only
+- Implement a volume control of the voice technology for the visually impaired who are also hearing impaired.
+- Make an identification of the status of all locking or toggle controls or keys accessible visually as well as by touch
+- Scanning ambiguous keyboards shows the best performance among the scanning text input.
+- Utilize the speech-to-text or dictation mode for typing
+- Use acoustic models dedicated to seniors for the speech recognizer",8,n,n,n,y,y,y,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,124,54,166,164,170,318,207,339,,,,,,,,,,,,
+72,"On touchscreen devices, elements are not clipped directly to edges?","Avoid that elements touch the edges, as the user might click them by accident. Near the edges otherwise is fine",-,-,-," -Overall, when designing new touch interfaces, Edges should be handled carefully.
+- When placing targets near edges or corners, be careful selecting their size and interaction technique, due to physical restrictions imposed by the device. Although screen barriers offer physical stability, they can also restrict users' movements. For instance, results have shown that acquiring mid-screen targets (Crossing) is easier than towards screen barriers (Exiting).
+- Do not use wide space between related information: When related information is shown on the screen, this information should be shown closer on the page in order to make this relationship visual too.",3,n,y,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,139,157,224,,,,,,,,,,,,,,,,,
+73,"On touchscreen devices with small screen, do simple gestures replace buttons?","On very small screens, gestures can replace buttons as long as it is clear to users and they can revert back to buttons easily",-,-,,"- On the other hand, when targets are small (7 mm), Tapping techniques should be avoided near Edges and instead make use of Directional Gestures (for able-bodied)
+-Regarding Task Errors, screen areas did not affect users’ performance. However, corners and edges allow users to tap targets more precisely, and perform directional gestures less erroneously. Consider that support from screen barriers, indeed, offers physical stability. 
+-Regarding Edges, Tapping is a better choice, since performing a particular Directional Gesture at this screen area may be difficult for tetraplegic users.",3,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,139,156,155,,,,,,,,,,,,,,,,,
+74,Main information is displayed at the screen center?,Main information should be towards center of the screen,-,-,-,"- Display main information on the center of the screen
+- Do not use wide space between related information: When related information is shown on the screen, this information should be shown closer on the page in order to make this relationship visual too.
+- Increase the exposure time of temporary posts and position them in the middle of the interface",3,n,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,y,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,250,308,267,,,,,,,,,,,,,,,,,
+75,"On touchscreen devices, more complex gestures can also be performed with buttons/ other gestures?","Provide alternatives duch as buttons for complex gestures, as not all users might find them intuitive to use",-,-,-,"-Consider that for older adults, sometimes there is a belief that their fingers have to operate in the area to be enlarged, a belief that may have formed given the subjects’ difficulty in accurately aligning two fingers and touching the area to be enlarged at the same time in a small screen (4.3-in.).",3,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,14,15,120,,,,,,,,,,,,,,,,,
+76,"On touchscreen device, is varied haptic feedback provided? ","Varied haptic feedback could be:
+- Vibrating only the area being touched, instead of whole device
+- Different vibration for different feedback",-,-,-,"-Make a user vibration feedback localized to the hand or touching/activation finger rather than vibrating the entire device
+-Use small high-speed displacements for the user vibration feedback to provide strong and easily detectable sensation (above threshold)
+-Provide a force feedback as vibration or locking a virtual pointer movement when she/he touches the virtual boundary.",3,n,y,n,n,y,y,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,169,182,183,,,,,,,,,,,,,,,,,
+77,Is slower speech for users with cognitive disabilities possible?,"- Either make it possible to customize the speed of audio or provide a slower version for users with cognitive disabilities
+- Alternatively 140wpm & small pause between words can also make content more easy to follow",-,-,"-
+    Provide an extended audio described version of a video’s soundtrack, selectable by the user; or
+    Provide an alternative version of your video with extended audio description.
+","-Use speech speed of 140 wpm
+- Make a pause of some seconds after each spoken sentence",3,n,n,n,y,y,n,n,n,n,n,n,y,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,45,-,-,-,-,-,-,47,344,,,,,,,,,,,,,,,,,,
+78,"When leaving the system if a task is only partially completed, is the user warned and can the user resume the task? ","If a form or task is partially done when user exits system, the user should be motified, asked whether the state should be saved, or whether he wants to resume and finish the task ",-,-,"-
+    When you ask a user to re-authenticate their identity, the user can continue exactly as before with saved data (for example, their shopping basket contents, input into forms or accessibility options).
+    Things like surveys and questionnaires can be saved and completed at a later date.
+","-When a user loses contact with a virtual object (for instance, contour following), make a system ask her/ him whether she/he would like to rely on automatic guidance to go back to the previous position of the object.
+-When the touch is lost during dragging, the object should stay where it has been left.",3,y,n,n,y,n,n,n,n,n,n,n,n,y,n,y,n,n,n,n,n,n,-,-,-,-,-,-,-,-,55,-,-,-,-,-,-,185,336,,,,,,,,,,,,,,,,,,
+79,Elements do not flash?,"Avoid flashing elements, either in videos as for simply page loading sequence. If it is impossible for any reason to have fashing, give an epilepsy warning before entering the system",-,-,-No content flashes more than three times per second,,2,y,n,n,y,n,n,n,n,y,y,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,14,56,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+80,Page titles are clear and helpful?,Ensure page title is bigger than the main text and made bold,-,-,"In many cases, it makes sense to repeat the page title or a variation of it as the top heading on your page.
+Type all of your page titles into a spreadsheet and review them. If they make sense out of context, they will work on your website.
+Use these page titles in your sitemap",-The page title was made bold,2,n,n,n,y,n,n,y,y,n,y,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,16,-,-,-,-,-,-,357,,,,,,,,,,,,,,,,,,,
+81,Interface language is easy to change?,User can easily change current interface language of the system,-,-,"-Page has a language assigned
+- Tell users when the language on a page changes",,2,n,n,n,y,n,n,y,n,n,y,n,y,n,n,n,n,y,y,n,n,n,-,-,-,-,-,-,-,-,19,37,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+82,"If unusual words are used, are they explained?",explain any unusual word,-,-,-,-,2,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,60,61,-,-,-,-,-,,,,,,,,,,,,,,,,,,,,
+83,No more than two fonts are used per view?,It is recommended to limit the number of fonts used per view to two,-,-,-,- Limit the number of the fonts utilized,2,n,n,n,y,n,n,n,y,n,y,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,41,-,-,-,-,-,-,-,-,-,245,,,,,,,,,,,,,,,,,,,
+84,Is the constrast customizable?,"- Provide contrast customization from the settings
+- For desktop browsers, provide easy access to the right browser extensions or settings",-,-,,"-Make it facile for the user to adjust contrast without needing to utilize browser controls
+- Support different types of contrast",2,n,n,n,y,n,n,n,n,n,y,y,y,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,396,94,,,,,,,,,,,,,,,,,,
+85,Amount of navigation links in a single page is not excessive?,"Avoid cluttering view with multiple navigtion destinations. Categorize them as much as possible, without making hierachy too much nested",,"- Do not have a deep hierarchy and group information into meaningful categories
+-Links should be in a bulleted list and not tightly clustered",-,"- Provide a maximum of 6 links in the menu
+- Provide the fewest possible of choices to users",2,y,n,n,y,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,-,-,-,-,-,26,-,-,-,-,-,-,-,-,-,231,,,,,,,,,,,,,,,,,,,
+86,"If a single element is made larger, do others follow? larger text -> larger buttons","Ensure that the design is responsive to the screen size:  
+- on a bigger screen space all elements become larger, 
+- on a smaller screen elements shrink up to a certain point and reorganize to maintain legibility",-Do buttons and icons enlarge when the rest of the text size is increased?,-,-,- Use adaptive algorithms to counteract these problems by resizing touch targets,2,y,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,y,y,17,-,-,-,-,-,-,-,-,-,-,-,-,-,-,117,,,,,,,,,,,,,,,,,,,
+87,"Secondary functions (such as customization, settings, etc) are easy to find?","- Seoncdary functions should be out of the way, but also not hidden, second or third tier selection is acceptable, such as:  -> settings -> customize contrast 
+- If only one or two secondary functions are present then showing them along primary function may be acceptable.",-,-,-,"- Ensure that the volume controls is in a facile to find emplacement
+- where possible all menu items should be displayed on the one page. Waloszek (2000) advises that different menu groups (e.g. main menu and secondary menu) should be differentiated by their shape and style
+",2,y,n,n,y,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,y,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,352,42,,,,,,,,,,,,,,,,,,
+88,Any numerical data is presented clearly?,"Show any numerical data as clearly as possible:
+- Numerical data can be more clearly presented as graphs or charts (if applicable)
+- Avoid roman numerals",-,-,-,"-When possible, give alternative representations to numerical content e.g., charts and graphs
+-Avoid Roman numerals",2,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,286,276,,,,,,,,,,,,,,,,,,
+89,Navigation destination is consistent? ,"A single navigation link should always points to same destination, irrelevant of the view it is being clicked in ",-,"-Links should be clearly named and no link with the same name should go to a different page",-,"- Ensure that navigation is consistent throughout the website or application e.g., similar fonts, colors and sizes, the use of the same set of buttons menu in the same place on each screen, the use the same symbols and icons throughout the website/ application, consistent hyperlinks",2,y,n,n,y,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,-,-,-,-,-,25,-,-,-,-,-,-,-,-,-,298,,,,,,,,,,,,,,,,,,,
+90,"If a user submits something, a review page is provided?","Always provide a summary of the information a user is submitting, with an option to easily change it, proceed, or undo the submission",-,-,-,"- Easy reversal of actions. Review page provided easy reversal of actions.
+- Informative feedback. Two ways for verification, a prompt and a sub-review message were provided.",2,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,205,204,,,,,,,,,,,,,,,,,,
+91,"On touchscreen devices, more accurate input methods are provided for users with hands tremors?","Making input keys larger or other custom approaches can be permissible at the cost of aesthetics, if it increases input accuracy",-,-,-,"-Consider speed-accuracy tradeoff, elderly users with tremor may prefer a more accurate input method, even if it is slower.
+- Tolerate imprecise gestures. Gestures that require higher levels of precision can be difficult for older adults. Such gestures include aspects of interaction, such as timing, and any inputs that require high levels of accuracy",2,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,y,y,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,119,123,,,,,,,,,,,,,,,,,,
+92,Is it easy to access a screenreader?,Either suggest or provide screen reader technology to users requiring it,-,-,-,-Provide an easy access to screen reader technology,2,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,188,179,,,,,,,,,,,,,,,,,,
+93,"On touchscreen devices, can a stylus be used?",Supporting stylus interaction can make device & system more accesible to a group of users who find interacting by touch too difficult,-,-,-,-Enable interaction through a stylus.,2,n,y,n,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,126,161,,,,,,,,,,,,,,,,,,
+94,"On touchscreen devices, is it possible to use OS-based assistive tools?","Enabling OS specific assistive tools, or developing the tool with this in mind can make a touch device system more accessible",-,-,-,"-Use assistive Touch on iOS to perform multi-touch gestures
+-Implement the ability for the interface to allow whole-handed and multifinger input. This is particularly important for individuals with hand tremors or arthitis.",2,n,y,n,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,133,162,,,,,,,,,,,,,,,,,,
+95,Video content has audio description version?,"Provide video with audio descriptive track and/or sign language version 
+",-,-,-,-,2,n,n,n,y,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,4,44,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+96,Audio content is not played automatically?,"Have audio on by default, but do not play any material automatically ",-,-,-,-The default setting of the audio output was turned on.,2,n,n,n,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,9,,-,-,-,-,-,358,,,,,,,,,,,,,,,,,,,
+97,User can move elements?,"Allow moving elements, or changing the layout",-,-,-,-,1,n,n,n,n,n,n,n,n,n,y,n,y,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,13,-,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+98,Errors not caused by the user are not reported as a regular error?,Any error that is not resulting from user behavior should not be shown to user as a regular error,-,-,-No major code errors,-,1,y,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,24,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,,
+99,Website conforms to HTML standards?,"Check your site using an HTML validator. Ensure plugins/libraries used, use valid HTML code",-,-,-Build all elements for accessibility,,1,y,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,25,-,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+100,Buttons are more wide than high?,Rectancular buttons are preferable over purely square shaped buttons,-,-,-,- Width rather than height. Whenever possible keys should be wider instead of taller.,1,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,105,,,,,,,,,,,,,,,,,,,
+101,"On touchscreen devices, gestures can be turned on/off or adjusted?","Allow gestures to be adjusted, or turned off",-,-,-,-Support the ability to disable or enable various gestures to match the skill level of the user,1,n,y,n,n,y,n,n,n,n,n,n,y,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7,,,,,,,,,,,,,,,,,,,
+102,"On touchscreen devices, if gestures are used, is it possible to practice using them?","Offer a tutorial where gestures can be experimented with, without worrying about ""breaking anything""",-,-,-,-Provide a training mode that teaches the user about each available gesture,1,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,148,,,,,,,,,,,,,,,,,,,
+103,No provocative language is used in text or error messages?,"- Do not blame the user or anybody else
+- Do not use coarse language
+- Do not make degatory remarks",-,-,-,"-Consider (and evaluate early) cultural issues in the design of icons, particularly given users' age and strong attachment to a specific culture.",1,y,n,n,y,n,n,y,n,n,n,n,n,n,y,y,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,51,,,,,,,,,,,,,,,,,,,
+104,Feedback messages use an encouraging tone?,Feeback messages should be useful for the user and supporting the user in performing the tasks,-,-,-,-Provide encouraging feedback message to allow the user experience some level of success,1,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,216,,,,,,,,,,,,,,,,,,,
+105,Feedback and error messages are presented at the center of the screen?,"Feedback/confirmation and error messages should appear in the center of the screen, and adequetely block the current view to avoid distractions",-,-,-,- Increase the exposure time of temporary posts and position them in the middle of the interface,1,y,n,n,y,n,n,n,n,n,y,n,n,n,y,y,n,n,n,n,n,y,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,267,,,,,,,,,,,,,,,,,,,
+106,Tasks with more than one step have a progress indicator? ,"- Provide clear indication of user progress for a task, e.g. in percentage, 1 out of x style; do not start at 0. 
+- Show smooth, linear progress; not erratic bursts of progress
+- Also show time left",-,-,-,"- Provide a clear indication of progress and performance. By using a typical progress bar, it could flexibly accommodate variation in the number of exercises without adding extravisual distractions. For overall performance, a percentage is deemed to be easy to understand for people with aphasia.",1,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,149,,,,,,,,,,,,,,,,,,,
+107,User can customize element content?,"For example: users can change buttons to be just text, instead of icon & text.",-,-,-,"-Users with cognitive disabilities, the top design recommendation was to use pictures, icons, and symbols along with text [2]. Considering the evidence, it may be better to recommend that the user should be able to set his or her preferred combination of such features.",1,n,n,n,y,n,n,n,n,n,y,n,y,n,n,n,y,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,151,,,,,,,,,,,,,,,,,,,
+108,Summaries of larger information sets are provided?,Provide summaries when a view contains several paragraphs of text,-,-,-,-,1,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,237,,,,,,,,,,,,,,,,,,,
+109,Search field are placed either top right or left corner of the view?,Search fields normally are in one of the top corner of systems. Users are likely to search one there.,-,-,-,-Place the search field in the upper right or upper left side of the screen,1,n,n,n,y,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,y,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,247,,,,,,,,,,,,,,,,,,,
+110,Images & Icons are large enough?,Images and icons should be large enough for user to be able easily identify them,-,-,-,-Provide large images and icons,1,y,n,n,y,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,412,,,,,,,,,,,,,,,,,,,
+112,Confirmation window's buttons are not directly aligned with their call button?,"Ensure that user cannot accidentally confirm something, 
+by making sure that any confirmation button will not appear 
+in the same location as the button that launched it",-,-,-,"-A user is likely to make a mistake in computing by clicking ‘‘OK’’ on the dialog ‘‘Are you sure you would like to quit the program without saving?’’ She/he does not pay attention to two buttons between ‘‘OK’’ and ‘‘CANCEL’’ when the two buttons are identical in terms of size, color, and so on, and the two buttons are also placed right next to each other",1,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,76,,,,,,,,,,,,,,,,,,,
+113,Device can be secured with a cable?,"For some specific users, providing a cable to secure the device can protect the device from accidental dropping",-,-,-,-,1,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,,,,,,,,,,,,,,,,,,,
+114,Accidental button press cannot directly close the system?,"Make sure that an accidential button press cannot directly close the system, or if this is not possible, such as some touch screen devices, the system should save its current state and offer to return to this when being re-activated",-,-,-,"-On iOS, use Guided Access to lock the device into one application for people who accidentally activate controls and may switch applications unintentionally.",1,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,8,,,,,,,,,,,,,,,,,,,
+115,"On touchscreen devices, if dragging gesture is used, is preference given to vertical movement?","Downward movement was found by a study to be easier for users, when using dragging gestures; therefore vertical movement for dragging should be prefered",-,-,-,"- For Dragging for both younger and older Right-handed adults - Design dragging tasks to have a bias, as much as possible, toward right and downward movements. Usability Improvement: Satisfaction - For tasks that require long-distance dragging (>310 mm), provide alternative controls (e.g., a “Back to Top” button). Usability Improvement: Error, ease of performance, satisfaction",1,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,13,,,,,,,,,,,,,,,,,,,
+116,One element only supports one form of interaction?,"Apply the principle: one function, one job. Avoid hiding additional functions into a single interactable element",-,-,-, Do not overload the same object with actions performed by a tap and by a drag gesture,1,y,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,314,,,,,,,,,,,,,,,,,,,
+117,Questionnaires use the multiple-choise style?,"When asking eldelry people to answer questionnaires, three-choice questionnaire was found to be effective",-,-,-,"-The most effective question type used in this study was a question with three multiple-choice answers, each illustrated by clip-art of a photograph. Photos or clip-art images are less useful for answer choices containing numbers or non-referring words. We believe the benefit of clip-art/photos arises from their helping participants understand the answer choices",1,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,154,,,,,,,,,,,,,,,,,,,
+118,Is it possible to hear the character's name being input in the system?,"For user with poor vision, hearin the name of each character as they are typed, can help minimize erros",-,-,-,-,1,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,171,,,,,,,,,,,,,,,,,,,
+119,Physical button is provided when needed?,"In very specific use cases, the user might require physical buttons specifically intended to work with the system",-,-,-,"-Use a push button to effectively deal with deactivated buttons in the virtual space; after a push button is pushed down, the push button should return to the original height. Even if a button is deactivated, the button can still be used as a reference point for users with visual impairments in the virtual space via a sense of touch. Those buttons should not be disappeared.",1,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,184,,,,,,,,,,,,,,,,,,,
+121,No distracting sounds are used ?,"Avoid poor loud background sound, noise, etc",-,-,-,-Remove background music or sound distractions,1,n,n,n,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,240,,,,,,,,,,,,,,,,,,,
+123,"Internal system gestures do not interfere with potential 
+gestures introduced by common assistive technology?",Ensure that gestures used do not cause issues with the devices own assistive software,-,-,-,-Avoid joint use of applications’ own gestures and the system screen reader,1,n,y,n,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,368,,,,,,,,,,,,,,,,,,,
+124,Cursor is always visible?,"Ensure that the cursor (if used) does not ""dissapear"" while the system is being used",-,-,-,-,1,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,429,,,,,,,,,,,,,,,,,,,
+125,"On touchscreen devices, no interation is required when user is moving (walking)?","If possible, detect when user is moving and avoid any distracting functions, of course this is something that should not become annoying in itself. ",-,-,-,"-Address physical factors, such as the weight of the device and dexterity issues of this population, and account for limitations in the mobility of the appliance, e.g. users may not be able to use the appliance while walking.",1,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,75,,,,,,,,,,,,,,,,,,,
+126,Information that is only meant for screen readers or other assistive technology is not generally visible?,Content intended for only certain assistive tools can be distracting for users who do not need them,-,-,-,"- The use of information, which is only visible for screen readers, will help people with visual impairments to interact with the system. Don’t hide interactive components visually but not for keyboard and screen reader users.",1,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,354,,,,,,,,,,,,,,,,,,,
+127,System supports assistive technologies?,For maximum accessibility supporting commong assistive tools is recommend,-,-,-,"-Every interactive element must properly describe their purpose for assistive technology users. Moreover, links must provide a description of their purpose and must be unique in the website",1,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,359,,,,,,,,,,,,,,,,,,,
+128,"On touchscreen devices with a custom launcher, 
+normal supplementary device information (time, date, signal type/strength) is always visible?","In case of custom launchers, device should always provide basic status info, such as: time, date, battery, signal strength",-,-,-,"Does the launcher show level of battery, time and date, signal of contact, wifi/3g",1,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,46,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+129,"For users with aphasia, vertical response buttons are provided?",For users with aphasia vertically aligned buttons can minimize errors,,,,"- Have the response buttons vertically aligned, to reduce the effects of visual neglect on responses.",1,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,y,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,73,,,,,,,,,,,,,,,,,,,
+130,"On touchscreen devices, returning to default settings is easy?","Allow easily resetting customs gestures ,etc",-,-,-,-,0,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+131,"In case of a service providing system, the user can contact the service provider for assistance?","In case a service is provided, the user should be able to ask for assistance, e.g. by chat or a ""help"" 
+option ",-,-,-,-,0,y,n,n,n,n,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+132,All video content has a resolution that is high enough?,Ensure that the resolution of video content is high enough so that the video content is also viewable on larger screens in good quality,-,-,-,-,0,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n,n,n,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,,,,,,,,,,,,,,,,,,,
+133,Is the user's native language supported?,"By preference, the system should provide all of its content in the native language of the user",-,-,-,-,0,y,n,n,y,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n,n,n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
