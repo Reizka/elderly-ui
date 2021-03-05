@@ -19,13 +19,14 @@
   }
 </style>
 
-<div>
-  <div class="">
-    <h1>Elderly UI</h1>
-    <Guidelines />
-    <p>This the project!!!</p>
-    <Navigate to="login">Login</Navigate>
-    <Navigate to="signup">signup</Navigate>
+<div class="">
+  <div class="p-8">
+    <h1 class="text-5xl mb-3">Elderly UI</h1>
+    <div class="">
+      <Guidelines />
+      <Navigate to="login">Login</Navigate>
+      <Navigate to="signup">signup</Navigate>
+    </div>
   </div>
   <!-- <HowToUseIt /> -->
   <!-- <Footer /> -->

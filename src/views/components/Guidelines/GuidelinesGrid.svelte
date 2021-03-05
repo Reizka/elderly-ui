@@ -1,7 +1,9 @@
 <script>
   export let data = []
+  export let className = ''
+  export let keys = []
+  export let filterKeys = []
   console.log('data', data)
-  const keys = ['code', 'CHECK', 'GUIDELINE', 'c_HEUMLE', 'c_SW', 'c_WCAG', 'c_D4ALL'] //Object.keys(data[0])
 
   const getColSize = (k) => {
     switch (k) {
@@ -22,6 +24,7 @@
     }
   }
   const getLs = (s) => s.split('-').filter((d) => d !== '')
+  //   const filterDict = filterKeys.reduce((acc, d) => ({ ...acc, [d.id]: d.selected }), {})
 </script>
 
 <style>
@@ -33,8 +36,8 @@
   } */
 </style>
 
-<div class=" p-8">
-  <table class="bg-blue-50 table-fixed">
+<div class={className}>
+  <table class=" table-fixed transition-all">
     <thead />
     <tr>
       {#each keys as k, i (i)}
@@ -43,8 +46,8 @@
     </tr>
     {#each data as d, i (i)}
       <tr>
-        {#each ['code', 'CHECK', 'GUIDELINE', 'c_HEUMLE', 'c_SW', 'c_WCAG', 'c_D4ALL'] as k (k)}
-          <td class={i % 2 === 1 ? 'bg-blue-100' : ''}>
+        {#each keys as k (k)}
+          <td class="p-1 {i % 2 === 1 ? 'bg-blue-100' : ''}">
             {#if getLs(d[k]).length === 1}
               {d[k]}
             {:else}

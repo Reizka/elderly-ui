@@ -1,17 +1,27 @@
 <script>
   import { csvParse } from 'd3-dsv'
-  import GuideLinePage from './GuidelinesGrid.svelte'
+  import GuideLinePage from './GuidelinesPage.svelte'
 
+  let extended = false
   const promise = fetch('/cetools.csv')
     .then((response) => response.text())
     .then((data) => {
       const lines = csvParse(data)
-      const keys = Object.keys(lines[0])
+      // const keys = Object.keys(lines[0])
 
+      const getBool = (d) => {
+        if (d === 'y') return true
+        if (d === 'n') return false
+        return d
+      }
       return lines.map((d, i) => {
-        const nd = keys.reduce((acc, k) => ({ ...acc, [k]: d[k].replace(/\n|\r/g, '') }), {})
+        const nd = Object.keys(d).reduce(
+          (acc, k) => ({ ...acc, [k.replace(/\n|\↵|\s/g, '')]: d[k].replace(/\n|\↵/g, '') }),
+          {}
+        )
+        const newNd = Object.keys(nd).reduce((acc, k) => ({ ...acc, [k]: getBool(nd[k]) }), {})
         return {
-          ...nd,
+          ...newNd,
           id: d.code,
         }
       })
