@@ -10,7 +10,7 @@
   }
 </script>
 
-<div>
+<div style="max-width:868px">
   {#each keys as k (k.id)}
     <label class="inline-flex items-center mt-3">
       <input

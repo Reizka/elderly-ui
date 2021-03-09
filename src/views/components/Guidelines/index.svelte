@@ -1,8 +1,8 @@
 <script>
   import { csvParse } from 'd3-dsv'
+  export let extended = false
   import GuideLinePage from './GuidelinesPage.svelte'
 
-  let extended = false
   const promise = fetch('/cetools.csv')
     .then((response) => response.text())
     .then((data) => {
@@ -16,7 +16,7 @@
       }
       return lines.map((d, i) => {
         const nd = Object.keys(d).reduce(
-          (acc, k) => ({ ...acc, [k.replace(/\n|\↵|\s/g, '')]: d[k].replace(/\n|\↵/g, '') }),
+          (acc, k) => ({ ...acc, [k.replace(/\n|\↵|\s| /g, '')]: d[k].replace(/\n|\↵|\r?\n|\r/g, '') }),
           {}
         )
         const newNd = Object.keys(nd).reduce((acc, k) => ({ ...acc, [k]: getBool(nd[k]) }), {})
@@ -28,12 +28,10 @@
     })
 </script>
 
-<div>
-  {#if promise}
-    {#await promise}
-      <p class="text-6xl m-auto">Loading...</p>
-    {:then data}
-      <GuideLinePage {data} />
-    {/await}
-  {/if}
-</div>
+{#if promise}
+  {#await promise}
+    <p class="text-6xl m-auto">Loading...</p>
+  {:then data}
+    <GuideLinePage {data} {extended} />
+  {/await}
+{/if}

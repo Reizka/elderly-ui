@@ -17,6 +17,7 @@
     "sirv-cli": "^1.0.0",
     "svelte": "^3.0.0",
     "svelte-preprocess": "^4.6.9",
+    "tabler-icons-svelte": "^1.6.0",
     "tailwindcss": "^2.0.3"
   },
   "scripts": {

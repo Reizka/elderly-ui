@@ -1,9 +1,8 @@
 <script>
   export let data = []
   import GuidelinesGrid from './GuidelinesGrid.svelte'
-  import TogglerBtn from '../TogglerBtn.svelte'
   import FilterMenu from './FilterMenu.svelte'
-  let extended = false
+  export let extended = false
 
   const keys0 = ['code', 'CHECK', 'GUIDELINE', 'c_HEUMLE', 'c_SW', 'c_WCAG', 'c_D4ALL'] //Object.keys(data[0])
   const keys1 = ['code', 'CHECK', 'GUIDELINE'] //Object.keys(data[0])
@@ -43,12 +42,7 @@
   }
 </script>
 
-<div class="">
-  <TogglerBtn
-    onClick={() => (extended = !extended)}
-    firstValue={'default'}
-    secValue="extended"
-    state={extended ? 'extended' : 'default'} />
+<div class="relative" style={extended ? '' : 'max-width: 1000px'}>
   <FilterMenu keys={filterKeys} onChange={(ks) => (filterKeys = ks)} />
   <GuidelinesGrid data={filteredData} keys={extended ? keys0 : keys1} className="mt-2 {!extended && 'w-1/2'}" />
 </div>
