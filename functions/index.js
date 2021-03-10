@@ -4,33 +4,18 @@ admin.initializeApp()
 const firestore = admin.firestore()
 firestore.settings({ timestampsInSnapshots: true })
 
-exports.createCompany = functions.region('europe-west1').https.onCall(async (data, context) => {
-  const Companies = firestore.collection('companies')
-  const Employees = firestore.collection('employees')
+exports.createUser = functions.region('europe-west1').https.onCall(async (data, context) => {
+  const Users = firestore.collection('users')
 
   if (!context.auth && !context.auth.uid) {
     throw new functions.https.HttpsError('unauthenticated')
   }
-
-  const { companyName } = data
-  if (!companyName) {
-    throw new functions.https.HttpsError('not-found')
-  }
   const userId = context.auth.uid
+  const { email } = data;
 
-  await admin.auth().setCustomUserClaims(userId, { role: 'admin' })
+  // await admin.auth().setCustomUserClaims(userId, { role: 'admin' })
 
-  return Companies.add({ name: companyName.toString(), createdBy: userId, createdAt: new Date() }).then(doc => {
-    Employees.doc(userId).set({
-      name: companyName.toString(),
-      role: 'creator',
-      companyId: doc.id,
-      createdAt: new Date(),
-      createdBy: userId,
-      active: true
-    })
-    admin.auth().setCustomUserClaims(userId, { companyId: doc.id, role: 'admin' })
-
+  return Users.add({ userId, email, createdAt: new Date() }).then(doc => {
     return 'ok'
   })
 })
