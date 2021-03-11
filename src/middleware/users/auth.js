@@ -11,19 +11,8 @@ Auth.onAuthStateChanged(() => {
       photoUrl: Auth.currentUser.photoUrl
     }
 
-    Employees.findOne(Auth.currentUser.uid).then(doc => {
-      userInfo.employee = doc.data()
-      userInfo.employee.id = doc.id
-      userInfo.displayName = userInfo.employee.name
-
-      Auth.currentUser.getIdTokenResult().then(idToken => {
-        userInfo.companyId = idToken.claims.companyId
-        userInfo.isAdmin = idToken.claims.role === 'admin' || idToken.claims.role === 'superAdmin'
-
-        currentUser.set(userInfo)
-      })
-    })
+    currentUser.set(userInfo)
   } else {
-    currentUser.set({ id: 0 })
+    currentUser.set(null)
   }
 })

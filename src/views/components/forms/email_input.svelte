@@ -10,16 +10,14 @@
 </script>
 
 <div class="input-field">
-  {#if icon}
-    <i class="material-icons prefix">{icon}</i>
-  {/if}
+  {#if icon}<i class="material-icons prefix">{icon}</i>{/if}
   <input
     bind:value
     on:input={() => (error = false)}
     type="email"
     name={inputName}
     {id}
-    class="validate"
+    class="p-1 border-2"
     class:invalid={error}
     autofocus={isFocused}
     on:blur />

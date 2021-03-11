@@ -2,9 +2,9 @@
   export let data = []
   export let className = ''
   export let keys = []
+  import Cell from './Cell.svelte'
   // export let filterKeys = []
 
-  import Scroller from './Scroller.svelte'
   console.log('data', data)
 
   const getColSize = (k) => {
@@ -26,18 +26,8 @@
         return ''
     }
   }
-  const getLs = (s) => s.split('-').filter((d) => d !== '')
   //   const filterDict = filterKeys.reduce((acc, d) => ({ ...acc, [d.id]: d.selected }), {})
 </script>
-
-<style>
-  td {
-    @apply border border-blue-500;
-  }
-  /* .test {
-    color: green;
-  } */
-</style>
 
 <div class="">
   <table class=" table-fixed transition-all ">
@@ -50,19 +40,7 @@
     {#each data as d, i (i)}
       <tr>
         {#each keys as k (k)}
-          <td class="p-1 {i % 2 === 1 ? 'bg-blue-100' : ''}">
-            {#if getLs(d[k]).length === 1}
-              <div class={getColSize(k)}>{d[k]}</div>
-            {:else}
-              <Scroller>
-                <ul class=" m-1 list-disc list-inside max-h-80 overflow-auto {getColSize(k)}">
-                  {#each getLs(d[k]) as e}
-                    <li>{e}</li>
-                  {/each}
-                </ul>
-              </Scroller>
-            {/if}
-          </td>
+          <Cell colSize={getColSize(k)} data={d[k]} className={i % 2 === 1 ? 'bg-blue-100' : ''} />
         {/each}
       </tr>
     {/each}

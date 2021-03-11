@@ -4,7 +4,7 @@
   import PasswordInput from '../../components/forms/password_input.svelte'
   import EmailInput from '../../components/forms/email_input.svelte'
   import FormButtons from '../../components/forms/buttons.svelte'
-  import { notificationMessage } from '../../../stores/notification_message.js'
+  // import { notificationMessage } from '../../../stores/notification_message.js'
   import { Auth } from '../../../config/firebase'
 
   const loginConstraints = {
@@ -61,12 +61,12 @@
     if (validateLoginForm()) {
       Auth.signInWithEmailAndPassword(email, password)
         .then(() => {
-          notificationMessage.set({ message: 'Welcome back!', type: 'success-toast' })
+          // notificationMessage.set({ message: 'Welcome back!', type: 'success-toast' })
           disableAction = false
-          navigateTo('admin')
+          navigateTo('/')
         })
         .catch((error) => {
-          notificationMessage.set({ message: error.message, type: 'danger-toast' })
+          // notificationMessage.set({ message: error.message, type: 'danger-toast' })
           disableAction = false
         })
     } else {

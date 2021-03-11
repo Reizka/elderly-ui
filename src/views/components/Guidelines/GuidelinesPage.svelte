@@ -4,6 +4,16 @@
   import FilterMenu from './FilterMenu.svelte'
   export let extended = false
 
+  import { Functions } from '../../../config/firebase'
+  import { onMount } from 'svelte'
+
+  // const getComment = Functions.httpsCallable('getComment')
+
+  // onMount(()=> {
+  //   getComment();
+
+  // })
+
   const keys0 = ['code', 'CHECK', 'GUIDELINE', 'c_HEUMLE', 'c_SW', 'c_WCAG', 'c_D4ALL'] //Object.keys(data[0])
   const keys1 = ['code', 'CHECK', 'GUIDELINE'] //Object.keys(data[0])
   const filterKeysArray = [

@@ -20,7 +20,7 @@
               <h3 class="center-align mt10">Elderly UI</h3>
             </div>
           </div>
-          <div class="card-content">
+          <div class="w-96">
             <span class="card-title center-align">Log In</span>
             <LoginForm />
             <p>

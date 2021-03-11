@@ -14,20 +14,20 @@
       presence: true,
       length: {
         minimum: 4,
-        message: 'must be at least 4 characters'
-      }
+        message: 'must be at least 4 characters',
+      },
     },
     email: {
       presence: true,
-      email: true
+      email: true,
     },
     password: {
       presence: true,
       length: {
         minimum: 6,
-        message: 'must be at least 6 characters'
-      }
-    }
+        message: 'must be at least 6 characters',
+      },
+    },
   }
 
   let name = ''
@@ -77,22 +77,26 @@
     disableAction = true
     validateLoginForm()
     if (validateLoginForm()) {
+      console.log('AUTH', Auth.createUserWithEmailAndPassword, email, password)
       const { user } = await Auth.createUserWithEmailAndPassword(email, password)
+
       if (user) {
-        const createCompany = Functions.httpsCallable('createCompany')
-        createCompany({ companyName: name })
+        const createUser = Functions.httpsCallable('createUser')
+        createUser({ email })
           .then(() => {
-            notificationMessage.set({
-              message: 'Your account was created successfully. Please log in',
-              type: 'success-toast'
-            })
+            console.log('yeah')
+            navigateTo('/')
+            // notificationMessage.set({
+            //   message: 'Your account was created successfully. Please log in',
+            //   type: 'success-toast',
+            // })
             // We logout the user to generate a new jwt with right token info
-            Auth.signOut().then(() => {
-              navigateTo('/login')
-            })
+            // Auth.signOut().then(() => {
+            //   navigateTo('/login')
+            // })
           })
-          .catch(error => {
-            notificationMessage.set({ message: error.message, type: 'danger-toast' })
+          .catch((error) => {
+            // notificationMessage.set({ message: error.message, type: 'danger-toast' })
             console.log(error)
           })
       }
@@ -102,7 +106,7 @@
   }
 </script>
 
-<form ref="form" on:submit|preventDefault={signInUser}>
+<form class="" ref="form" on:submit|preventDefault={signInUser}>
   <TextInput
     bind:value={name}
     error={nameError}

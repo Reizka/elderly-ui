@@ -10,8 +10,7 @@
   export let helpText = ''
 </script>
 
-<div class="input-field">
-  {#if icon}<i class="material-icons prefix">{icon}</i>{/if}
+<div class="p-1 border-2">
   <input
     bind:value
     on:input={() => (error = false)}

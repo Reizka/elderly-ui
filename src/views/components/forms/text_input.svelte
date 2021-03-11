@@ -16,8 +16,8 @@
 </script>
 
 <div class="input-field">
-  {#if icon}<i class="material-icons prefix">{icon}</i>{/if}
   <input
+    class="p-1 border-2"
     bind:value
     on:input={() => (error = false)}
     type="text"
