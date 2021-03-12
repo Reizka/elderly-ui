@@ -25,7 +25,8 @@ exports.addComment = functions.region('europe-west1').https.onCall(async (data, 
   if (!context.auth && !context.auth.uid) {
     throw new functions.https.HttpsError('unauthenticated')
   }
-  const email = context.auth.email
+  const email = '';//context.auth.email
+  console.log('context auth', context.auth);
   const { code } = data;
 
   // await admin.auth().setCustomUserClaims(userId, { role: 'admin' })
