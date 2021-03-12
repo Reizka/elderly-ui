@@ -4,7 +4,7 @@ functions/node_modules
 public/bundle.*
 src/config/settings.js
 /dist
-src/config
+# src/config
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
