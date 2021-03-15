@@ -40,7 +40,12 @@
     {#each data as d, i (i)}
       <tr>
         {#each keys as k (k)}
-          <Cell colSize={getColSize(k)} data={d[k]} className={i % 2 === 1 ? 'bg-blue-100' : ''} />
+          <Cell
+            code={d.code}
+            type={k.toLowerCase()}
+            colSize={getColSize(k)}
+            data={d[k]}
+            className={i % 2 === 1 ? 'bg-blue-100' : ''} />
         {/each}
       </tr>
     {/each}

@@ -25,13 +25,14 @@ exports.addComment = functions.region('europe-west1').https.onCall(async (data, 
   if (!context.auth && !context.auth.uid) {
     throw new functions.https.HttpsError('unauthenticated')
   }
-  const email = '';//context.auth.email
-  console.log('context auth', context.auth);
+  const email = context.auth.email || 'jmaushag@gmail.com'
   const { code } = data;
+  console.log('code', code, email, context.auth);
+  console.log('context', context.auth);
 
   // await admin.auth().setCustomUserClaims(userId, { role: 'admin' })
 
-  return Users.doc(email).collection('comments').doc(code).set(data).then(doc => {
+  return Users.doc(email).collection('comments').doc(code).set(data, { merge: true }).then(doc => {
     return 'ok'
   })
 })
@@ -48,8 +49,9 @@ exports.getComment = functions.region('europe-west1').https.onCall(async (data, 
 
   var docRef = firestore.collection("users").doc(email).collection('comments').doc(`${code}`)
 
-  docRef.get().then((doc) => {
+  return docRef.get().then((doc) => {
     if (doc.exists) {
+      console.log('doc', doc.data());
       return doc.data();
     } else {
       // doc.data() will be undefined in this case
@@ -69,7 +71,7 @@ exports.getUser = functions.region('europe-west1').https.onCall(async (data, con
   const { email } = data;
   var docRef = db.collection("users").doc(email);
 
-  docRef.get().then((doc) => {
+  return docRef.get().then((doc) => {
     if (doc.exists) {
       return doc.data();
     } else {

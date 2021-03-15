@@ -1,29 +1,15 @@
 <script>
   import Scroller from './Scroller.svelte'
-  import { Functions } from '../../../config/firebase'
-  import { onMount } from 'svelte'
-  import Dialog from '@fouita/dialog'
+  import Modal from './Modal.svelte'
   export let className
   export let data = []
   export let colSize = ''
+  export let type
+  export let code
   let visible = false
-  function toggle() {
-    visible = !visible
-  }
 
-  const getComment = Functions.httpsCallable('getComment')
-  const addComment = Functions.httpsCallable('addComment')
   const getLs = (s) => s.split('-').filter((d) => d !== '')
-
-  const onChange = (e) => {
-    console.log('e', e)
-    addComment({ check: 'blalbla', code: '1' })
-  }
-
-  onMount(() => {
-    console.log('mount')
-    getComment({ code: 1 }).then((d) => console.log('d', d))
-  })
+  const onModalClick = () => (visible = !visible)
 </script>
 
 <style>
@@ -47,6 +33,8 @@
       </ul>
     </Scroller>
   {/if}
-  <button class="px-4 py-2 m-2 border" on:click={toggle}>Toggle</button>
+  {#if type === 'check' || type === 'guideline'}
+    <button class="px-2 py-1 m-2 border" on:click={onModalClick}>Comment</button>
+  {/if}
+  <Modal {visible} {type} {code} onClick={onModalClick} />
 </td>
-<Dialog bind:visible title="Comment"><textarea on:change={onChange} class="m-2 border w-80 h-40" /></Dialog>
