@@ -63,7 +63,7 @@
         .then(() => {
           // notificationMessage.set({ message: 'Welcome back!', type: 'success-toast' })
           disableAction = false
-          navigateTo('/')
+          navigateTo('ui-grid')
         })
         .catch((error) => {
           // notificationMessage.set({ message: error.message, type: 'danger-toast' })

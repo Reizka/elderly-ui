@@ -30,7 +30,7 @@
 </script>
 
 <div class="">
-  <table class=" table-fixed transition-all ">
+  <table class=" table-fixed transition-all rounded">
     <thead />
     <tr>
       {#each keys as k, i (i)}
@@ -45,7 +45,7 @@
             type={k.toLowerCase()}
             colSize={getColSize(k)}
             data={d[k]}
-            className={i % 2 === 1 ? 'bg-blue-100' : ''} />
+            className={i % 2 === 1 ? 'bg-indigo-100' : ''} />
         {/each}
       </tr>
     {/each}

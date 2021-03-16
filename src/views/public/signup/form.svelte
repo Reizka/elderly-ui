@@ -106,14 +106,7 @@
   }
 </script>
 
-<form class="" ref="form" on:submit|preventDefault={signInUser}>
-  <TextInput
-    bind:value={name}
-    error={nameError}
-    label="Your name"
-    icon="person"
-    isFocused={true}
-    errorMessage={nameMessage} />
+<form class="w-96" ref="form" on:submit|preventDefault={signInUser}>
   <EmailInput bind:value={email} error={emailError} errorMessage={emailMessage} />
   <PasswordInput bind:value={password} error={passwordError} errorMessage={passwordMessage} />
   <FormButtons cancelButton={false} submitText="Create account" isLoading={disableAction} />

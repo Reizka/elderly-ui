@@ -11,24 +11,14 @@
 </style>
 
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="col s8 offset-s2">
-        <div class="card card-login">
-          <div class="card-login-splash">
-            <div class="wrapper">
-              <h3 class="center-align mt10">Elderly UI</h3>
-            </div>
-          </div>
-          <div class="w-96">
-            <span class="card-title center-align">Log In</span>
-            <LoginForm />
-            <p>
-              <Navigate to="signup">Create an account.</Navigate>
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="flex flex-col">
+    <div class="mx-auto w-96">
+      <h3 class="mt-10 text-3xl">Elderly UI</h3>
+      <span class="card-title center-align">Log In</span>
+      <LoginForm />
+      <p class="underline">
+        <Navigate to="signup">Create an account.</Navigate>
+      </p>
     </div>
   </div>
 </main>

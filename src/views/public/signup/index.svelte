@@ -10,16 +10,14 @@
   }
 </style>
 
-<main class="flex">
+<main class="flex mt-10">
   <div class="m-auto">
+    <h3 class="text-3xl mx-auto">Elderly UI</h3>
     <div class="">
-      <h3 class="">Svelte & Firebase</h3>
-    </div>
-    <div class="">
-      <span class="">Create your account</span>
+      <span class="mb-3">Create your account</span>
       <SignupForm />
-      <p>
-        <Navigate to="login">Already have an account? Log in</Navigate>
+      <p class="underline">
+        <Navigate class="" to="login">Already have an account? Log in</Navigate>
       </p>
     </div>
   </div>

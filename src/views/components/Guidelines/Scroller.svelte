@@ -32,8 +32,8 @@
   <slot />
 </span>
 {#if scrollable}
-  <div class="flex justify-center border-t-2">
-    <button on:click={() => scroll()}>
+  <div role="button" on:click={() => scroll()} class="flex justify-center border-t-2">
+    <button>
       <ChevronsDown /></button>
   </div>
 {/if}

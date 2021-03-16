@@ -7,7 +7,7 @@
 
   const dispatch = createEventDispatcher()
 
-  const cancelAction = event => {
+  const cancelAction = (event) => {
     event.preventDefault()
     dispatch('cancel')
   }
@@ -25,7 +25,10 @@
 
 <div class="field form-buttons">
   {#if cancelButton}
-    <button type="button" on:click={cancelAction} class="btn cancel btn-flat">{cancelText}</button>
+    <button
+      type="button"
+      on:click={cancelAction}
+      class="w-full bg-indigo-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">{cancelText}</button>
   {/if}
   {#if isLoading}
     <div class="preloader-wrapper small active">
@@ -42,6 +45,9 @@
       </div>
     </div>
   {:else}
-    <button type="submit" class="btn green darken-1">{submitText} </button>
+    <button
+      type="submit"
+      class="w-full bg-indigo-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded">{submitText}
+    </button>
   {/if}
 </div>

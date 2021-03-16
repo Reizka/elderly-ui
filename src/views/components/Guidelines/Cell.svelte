@@ -1,6 +1,7 @@
 <script>
   import Scroller from './Scroller.svelte'
   import Modal from './Modal.svelte'
+  import { Edit } from 'tabler-icons-svelte'
   export let className
   export let data = []
   export let colSize = ''
@@ -21,9 +22,14 @@
   } */
 </style>
 
-<td class="p-1 border border-blue-500 {className}">
+<td class="p-1 border border-indigo-500 {className}">
   {#if getLs(data).length === 1}
-    <div class={colSize}>{data}</div>
+    <div class={colSize + ' flex items-center'}>
+      <div>{data}</div>
+      {#if type === 'code'}
+        <button class="px-2 py-1  " on:click={onModalClick}><Edit /></button>
+      {/if}
+    </div>
   {:else}
     <Scroller>
       <ul class=" m-1 list-disc list-inside max-h-80 overflow-auto {colSize}">
@@ -32,9 +38,6 @@
         {/each}
       </ul>
     </Scroller>
-  {/if}
-  {#if type === 'check' || type === 'guideline'}
-    <button class="px-2 py-1 m-2 border" on:click={onModalClick}>Comment</button>
   {/if}
   <Modal {visible} {type} {code} onClick={onModalClick} />
 </td>
