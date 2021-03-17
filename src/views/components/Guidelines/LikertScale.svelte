@@ -1,20 +1,23 @@
 <script>
   import { Functions } from '../../../config/firebase'
   export let code
-  let likert = null
+  export let data
+  export let onUpload
+  let likert = data
 
   const getComment = Functions.httpsCallable('getComment')
   const addComment = Functions.httpsCallable('addComment')
 
   const onChange = (e) => {
-    console.log('e', e.target.value)
-    addComment({ likert: e.target.value, code })
+    onUpload(true)
+    // console.log('e', e.target.value)
+    addComment({ likert: e.target.value, code }).then(() => setTimeout(() => onUpload(false), 1000))
   }
-  const promise = getComment({ code }).then((d) => {
-    console.log('likert', d)
+  //   const promise = getComment({ code }).then((d) => {
+  //     console.log('likert', d)
 
-    if (d.data && d.data.likert) likert = +d.data.likert
-  })
+  //     if (d.data && d.data.likert) likert = +d.data.likert
+  //   })
 </script>
 
 <div class="flex mb-3">

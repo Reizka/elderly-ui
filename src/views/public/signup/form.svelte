@@ -7,16 +7,11 @@
   import PasswordInput from '../../components/forms/password_input.svelte'
   import EmailInput from '../../components/forms/email_input.svelte'
   import FormButtons from '../../components/forms/buttons.svelte'
-  import { notificationMessage } from '../../../stores/notification_message.js'
+  import { getNotificationsContext } from 'svelte-notifications'
+
+  const { addNotification, clearNotifications } = getNotificationsContext()
 
   const signupConstraints = {
-    name: {
-      presence: true,
-      length: {
-        minimum: 4,
-        message: 'must be at least 4 characters',
-      },
-    },
     email: {
       presence: true,
       email: true,
@@ -30,7 +25,6 @@
     },
   }
 
-  let name = ''
   let nameError = false
   let nameMessage = ''
   let email = ''
@@ -52,7 +46,9 @@
 
   const validateLoginForm = () => {
     resetErrorInfo()
-    const validationResult = validate({ name, email, password }, signupConstraints)
+    clearNotifications()
+    const validationResult = validate({ email, password }, signupConstraints)
+    console.log('validationResult', validationResult)
     if (!validationResult) {
       return true
     } else {
@@ -64,10 +60,6 @@
         passwordMessage = validationResult.password[0]
         passwordError = true
       }
-      if (validationResult.name && validationResult.name.length > 0) {
-        nameMessage = validationResult.name[0]
-        nameError = true
-      }
     }
 
     return false
@@ -75,17 +67,33 @@
 
   const signInUser = async () => {
     disableAction = true
-    validateLoginForm()
-    if (validateLoginForm()) {
-      console.log('AUTH', Auth.createUserWithEmailAndPassword, email, password)
-      const { user } = await Auth.createUserWithEmailAndPassword(email, password)
+    const isValid = validateLoginForm()
+    // console.log('isValid', isValid)
+    if (isValid) {
+      let user = null
+      try {
+        const result = await Auth.createUserWithEmailAndPassword(email, password)
+        user = result.user
+      } catch (e) {
+        addNotification({
+          text: e.message,
+          position: 'bottom-center',
+          type: 'danger',
+        })
+        disableAction = false
+      }
 
       if (user) {
         const createUser = Functions.httpsCallable('createUser')
         createUser({ email })
           .then(() => {
             console.log('yeah')
-            navigateTo('/')
+            navigateTo('ui-grid')
+            addNotification({
+              text: 'Your account was created successfully.',
+              position: 'bottom-center',
+              type: 'success',
+            })
             // notificationMessage.set({
             //   message: 'Your account was created successfully. Please log in',
             //   type: 'success-toast',
@@ -96,12 +104,37 @@
             // })
           })
           .catch((error) => {
-            // notificationMessage.set({ message: error.message, type: 'danger-toast' })
+            addNotification({
+              id: 'firebase',
+              text: error.message,
+              position: 'bottom-center',
+              type: 'danger',
+            })
             console.log(error)
+            disableAction = false
           })
       }
     } else {
       disableAction = false
+
+      if (emailError)
+        addNotification({
+          id: 'email' + new Date().getMilliseconds(),
+          text: emailMessage,
+          position: 'bottom-center',
+          type: 'danger',
+        })
+      if (passwordError) {
+        setTimeout(() =>
+          addNotification({
+            id: 'pw' + new Date().getMilliseconds(),
+            text: passwordMessage,
+            position: 'bottom-center',
+            type: 'danger',
+          })
+        ),
+          50
+      }
     }
   }
 </script>

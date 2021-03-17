@@ -7,6 +7,10 @@
   // import { notificationMessage } from '../../../stores/notification_message.js'
   import { Auth } from '../../../config/firebase'
 
+  import { getNotificationsContext } from 'svelte-notifications'
+
+  const { addNotification, clearNotifications } = getNotificationsContext()
+
   const loginConstraints = {
     email: {
       presence: true,
@@ -38,6 +42,7 @@
 
   const validateLoginForm = () => {
     resetErrorInfo()
+    clearNotifications()
     const validationResult = validate({ email, password }, loginConstraints)
     if (!validationResult) {
       return true
@@ -68,10 +73,36 @@
         .catch((error) => {
           // notificationMessage.set({ message: error.message, type: 'danger-toast' })
           disableAction = false
+
+          addNotification({
+            id: 'fb' + new Date().getMilliseconds(),
+            text: error.message,
+            position: 'bottom-center',
+            type: 'danger',
+          })
         })
     } else {
       disableAction = false
+      if (emailError)
+        addNotification({
+          id: 'email' + new Date().getMilliseconds(),
+          text: emailMessage,
+          position: 'bottom-center',
+          type: 'danger',
+        })
+      if (passwordError)
+        setTimeout(
+          () =>
+            addNotification({
+              id: 'pw' + new Date().getMilliseconds(),
+              text: passwordMessage,
+              position: 'bottom-center',
+              type: 'danger',
+            }),
+          50
+        )
     }
+    console.log('passwordMessage', passwordMessage)
   }
 </script>
 
