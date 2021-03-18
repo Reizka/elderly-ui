@@ -8,7 +8,7 @@
   import Dialog from '@fouita/dialog'
   import Comment from './Comment.svelte'
   import LikertScale from './LikertScale.svelte'
-  import App from '../../../App.svelte'
+  import { currentUser } from '../../../stores/current_user'
 
   //   onMount(() => {
   //     console.log('mount')
@@ -22,9 +22,10 @@
   let upload = false
 
   $: {
-    if (true || visible) {
+    if (visible) {
       isLoading = true
-      const promise = getComment({ code }).then((d) => {
+      console.log('currentUser', $currentUser)
+      const promise = getComment({ code, email: $currentUser.email }).then((d) => {
         isLoading = false
         if (d.data) {
           if (d.data.likert) likert = +d.data.likert

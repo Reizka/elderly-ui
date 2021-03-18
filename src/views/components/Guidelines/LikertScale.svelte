@@ -5,13 +5,15 @@
   export let onUpload
   let likert = data
 
-  const getComment = Functions.httpsCallable('getComment')
+  import { currentUser } from '../../../stores/current_user'
   const addComment = Functions.httpsCallable('addComment')
 
   const onChange = (e) => {
     onUpload(true)
     // console.log('e', e.target.value)
-    addComment({ likert: e.target.value, code }).then(() => setTimeout(() => onUpload(false), 1000))
+    addComment({ likert: e.target.value, email: $currentUser.email, code }).then(() =>
+      setTimeout(() => onUpload(false), 200)
+    )
   }
   //   const promise = getComment({ code }).then((d) => {
   //     console.log('likert', d)
@@ -25,7 +27,7 @@
     <label class="inline-flex items-center mt-3 mr-1">
       <input
         type="radio"
-        bind:group={likert}
+        bind:group={data}
         class="form-radio h-5 w-5 text-gray-600"
         value={3}
         on:change={onChange} /><span class="ml-2 text-gray-700">Strongly agree</span>
@@ -34,7 +36,7 @@
     <label class="inline-flex items-center mt-3 mr-1">
       <input
         type="radio"
-        bind:group={likert}
+        bind:group={data}
         class="form-radio h-5 w-5 text-red-600"
         value={2}
         on:change={onChange} /><span class="ml-2 text-gray-700">Agree</span>
@@ -43,7 +45,7 @@
     <label class="inline-flex items-center mt-3 mr-1">
       <input
         type="radio"
-        bind:group={likert}
+        bind:group={data}
         class="form-radio h-5 w-5 text-orange-600"
         value={1}
         on:change={onChange} /><span class="ml-2 text-gray-700">Disagree</span>
@@ -52,7 +54,7 @@
     <label class="inline-flex items-center mt-3">
       <input
         type="radio"
-        bind:group={likert}
+        bind:group={data}
         class="form-radio h-5 w-5 text-yellow-600"
         value={0}
         on:change={onChange} /><span class="ml-2 text-gray-700">Strongly disagree</span>

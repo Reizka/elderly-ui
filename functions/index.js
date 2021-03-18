@@ -25,8 +25,8 @@ exports.addComment = functions.region('europe-west1').https.onCall(async (data, 
   if (!context.auth && !context.auth.uid) {
     throw new functions.https.HttpsError('unauthenticated')
   }
-  const email = context.auth.email || 'jmaushag@gmail.com'
-  const { code } = data;
+  // const email = context.auth.email
+  const { code, email } = data;
   console.log('code', code, email, context.auth);
   console.log('context', context.auth);
 
@@ -42,20 +42,22 @@ exports.addComment = functions.region('europe-west1').https.onCall(async (data, 
 exports.getComment = functions.region('europe-west1').https.onCall(async (data, context) => {
 
   if (!context.auth && !context.auth.uid) {
+    console.log('error', context);
     throw new functions.https.HttpsError('unauthenticated')
   }
-  const email = context.auth.email || 'jmaushag@gmail.com'
-  const { code } = data;
+  // const email = context.auth.email
+  const { code, email } = data;
+  console.log('context.auth', context.auth.email, 'code', code)
 
   var docRef = firestore.collection("users").doc(email).collection('comments').doc(`${code}`)
 
   return docRef.get().then((doc) => {
     if (doc.exists) {
-      console.log('doc', doc.data());
+      // console.log('doc', doc.data());
       return doc.data();
     } else {
       // doc.data() will be undefined in this case
-      console.log("No such document!");
+      // console.log("No such document!");
       return null;
     }
   }).catch((error) => {
