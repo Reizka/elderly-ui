@@ -4,8 +4,8 @@
   import FilterMenu from './FilterMenu.svelte'
   export let extended = false
 
-  import { Functions } from '../../../config/firebase'
-  import { onMount } from 'svelte'
+  import { navigateTo } from 'svelte-router-spa'
+  import { Auth } from '../../../config/firebase'
 
   // const getComment = Functions.httpsCallable('getComment')
 
@@ -31,7 +31,7 @@
     'icon/image/graphics',
     'multimodal',
     'navigation',
-    'screendesign/(appearance)',
+    'screendesign(appearance)',
     'specialneeds',
     'supplementarydevice/tool',
     'text',
@@ -44,7 +44,7 @@
     // console.log('filterKeys', filterKeys)
 
     filteredData = data.filter((d) => {
-      return filterKeys.filter((d) => d.selected).every((k) => d[k.id] === k.selected)
+      return filterKeys.filter((d) => d.selected).every((k) => d[k.id])
     })
     console.log('filterKeys', filterKeys)
     console.log('filteredData', filteredData)
@@ -54,5 +54,13 @@
 
 <div class="relative" style={extended ? '' : 'max-width: 1000px'}>
   <FilterMenu keys={filterKeys} onChange={(ks) => (filterKeys = ks)} />
+  <button
+    on:click={Auth.signOut().then( () => {
+        console.log('Signed Out')
+      }, (error) => {
+        console.error('Sign Out Error', error)
+      } )}>
+    Sign out
+  </button>
   <GuidelinesGrid data={filteredData} keys={extended ? keys0 : keys1} className="mt-2 {!extended && 'w-1/2'}" />
 </div>

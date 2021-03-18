@@ -52,7 +52,7 @@
       <Comment data={GUIDELINE} id="guide" {visible} type="GUIDELINE" {code} onUpload={(e) => (upload = e)} />
     </div>
     <div>
-      <label class="block text-indigo-500 text-lg" for="likert">Likert Scale:</label>
+      <label class="block text-indigo-500 text-lg" for="likert">Do you see this guideline important?</label>
       <LikertScale id="likert" {code} data={likert} onUpload={(e) => (upload = e)} />
     </div>
     <button
