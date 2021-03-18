@@ -4,9 +4,6 @@
   import FilterMenu from './FilterMenu.svelte'
   export let extended = false
 
-  import { navigateTo } from 'svelte-router-spa'
-  import { Auth } from '../../../config/firebase'
-
   // const getComment = Functions.httpsCallable('getComment')
 
   // onMount(()=> {
@@ -54,13 +51,5 @@
 
 <div class="relative" style={extended ? '' : 'max-width: 1000px'}>
   <FilterMenu keys={filterKeys} onChange={(ks) => (filterKeys = ks)} />
-  <button
-    on:click={Auth.signOut().then( () => {
-        console.log('Signed Out')
-      }, (error) => {
-        console.error('Sign Out Error', error)
-      } )}>
-    Sign out
-  </button>
   <GuidelinesGrid data={filteredData} keys={extended ? keys0 : keys1} className="mt-2 {!extended && 'w-1/2'}" />
 </div>

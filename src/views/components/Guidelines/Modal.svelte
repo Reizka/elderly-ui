@@ -38,29 +38,31 @@
 </script>
 
 <Dialog inverted color="indigo" rounded="sm" bind:visible title="Comment: {code}" closable={false}>
-  {#if isLoading}
-    <p>Loading...</p>
-  {/if}
-  <form class="flex flex-col m-2 {isLoading && 'opacity-0'}">
-    <div class="flex flex-col">
-      <label class="block text-indigo-500 text-lg" for="check">CHECK:</label>
-      <Comment data={CHECK} id="check" {visible} type="CHECK" {code} onUpload={(e) => (upload = e)} />
-    </div>
+  <div class="relative">
+    {#if isLoading}
+      <p class="absolute m-auto text-xl" style="top: 50%; left:40%">Loading...</p>
+    {/if}
+    <form class="flex flex-col m-2 {isLoading && 'opacity-0'}">
+      <div class="flex flex-col">
+        <label class="block text-indigo-500 text-lg" for="check">CHECK:</label>
+        <Comment data={CHECK} id="check" {visible} type="CHECK" {code} onUpload={(e) => (upload = e)} />
+      </div>
 
-    <div class="flex flex-col">
-      <label class="block text-indigo-500 text-lg" for="guide">GUIDELINE:</label>
-      <Comment data={GUIDELINE} id="guide" {visible} type="GUIDELINE" {code} onUpload={(e) => (upload = e)} />
-    </div>
-    <div>
-      <label class="block text-indigo-500 text-lg" for="likert">Do you see this guideline important?</label>
-      <LikertScale id="likert" {code} data={likert} onUpload={(e) => (upload = e)} />
-    </div>
-    <button
-      disabled={upload}
-      class="mx-2 mt-1 mb-2 p-1 bg-indigo-100 text-indigo-900 font-bold"
-      on:click|preventDefault={() => {
-        onClick()
-        // isLoading = true
-      }}>{upload ? 'Updating...' : 'Close'}</button>
-  </form>
+      <div class="flex flex-col">
+        <label class="block text-indigo-500 text-lg" for="guide">GUIDELINE:</label>
+        <Comment data={GUIDELINE} id="guide" {visible} type="GUIDELINE" {code} onUpload={(e) => (upload = e)} />
+      </div>
+      <div>
+        <label class="block text-indigo-500 text-lg" for="likert">Do you see this guideline important?</label>
+        <LikertScale id="likert" {code} data={likert} onUpload={(e) => (upload = e)} />
+      </div>
+      <button
+        disabled={upload}
+        class="mx-2 mt-1 mb-2 p-1 bg-indigo-100 text-indigo-900 font-bold"
+        on:click|preventDefault={() => {
+          onClick()
+          // isLoading = true
+        }}>{upload ? 'Updating...' : 'Close'}</button>
+    </form>
+  </div>
 </Dialog>

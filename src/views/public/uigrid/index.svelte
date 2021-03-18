@@ -1,11 +1,22 @@
 <script>
-  import { onMount } from 'svelte'
-  import { Navigate } from 'svelte-router-spa'
+  import { navigateTo } from 'svelte-router-spa'
+  import { Auth } from '../../../config/firebase'
 
   import TogglerBtn from '../../components/TogglerBtn.svelte'
   import Guidelines from '../../components/Guidelines/index.svelte'
 
   let extended = false
+
+  const signout = () =>
+    Auth.signOut().then(
+      () => {
+        console.log('Signed Out')
+        navigateTo('/')
+      },
+      (error) => {
+        console.error('Sign Out Error', error)
+      }
+    )
 </script>
 
 <div class="flex {!extended && 'justify-center'}">
@@ -17,7 +28,11 @@
         secValue="extended"
         state={extended ? 'extended' : 'default'} />
     </div>
-    <h1 class="text-5xl mb-3 ">Elderly UI</h1>
+
+    <div class="flex items-center">
+      <h1 class="text-5xl mb-3 mr-3">Elderly UI</h1>
+      <button class="border bg-indigo-200 text-lg p-1 rounded-sm font-bold " on:click={signout}> Sign out </button>
+    </div>
     <div class="pr-48">
       <Guidelines {extended} />
     </div>
