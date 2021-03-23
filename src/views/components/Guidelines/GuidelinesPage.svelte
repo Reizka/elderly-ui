@@ -1,5 +1,6 @@
 <script>
   export let data = []
+  export let comments = []
   import GuidelinesGrid from './GuidelinesGrid.svelte'
   import FilterMenu from './FilterMenu.svelte'
   export let extended = false
@@ -73,5 +74,9 @@
 
 <div class="relative" style={extended ? '' : 'max-width: 1000px'}>
   <FilterMenu keys={filterKeys} labels={filterKeysLabels} onChange={(ks) => (filterKeys = ks)} />
-  <GuidelinesGrid data={filteredData} keys={extended ? keys0 : keys1} className="mt-2 {!extended && 'w-1/2'}" />
+  <GuidelinesGrid
+    {comments}
+    data={filteredData}
+    keys={extended ? keys0 : keys1}
+    className="mt-2 {!extended && 'w-1/2'}" />
 </div>

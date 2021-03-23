@@ -7,10 +7,13 @@
   export let colSize = ''
   export let type
   export let code
+  export let onComment
+  export let comment
   let visible = false
 
   const getLs = (s) => s.split('-').filter((d) => d !== '')
   const onModalClick = () => (visible = !visible)
+  //   console.log('comment cell', comment)
 </script>
 
 <style>
@@ -27,7 +30,7 @@
     <div class={colSize + ' flex items-center'}>
       <div>{data}</div>
       {#if type === 'code'}
-        <button class="px-2 py-1  " on:click={onModalClick}><Edit /></button>
+        <button class="px-2 py-1" on:click={onModalClick}><Edit color={comment ? 'green' : 'red'} /></button>
       {/if}
     </div>
   {:else}
@@ -39,5 +42,5 @@
       </ul>
     </Scroller>
   {/if}
-  <Modal {visible} {type} {code} onClick={onModalClick} />
+  <Modal {comment} {visible} {type} {code} onClick={onModalClick} {onComment} />
 </td>

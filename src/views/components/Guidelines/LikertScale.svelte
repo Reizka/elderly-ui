@@ -12,7 +12,7 @@
     onUpload(true)
     // console.log('e', e.target.value)
     addComment({ likert: e.target.value, email: $currentUser.email, code }).then(() =>
-      setTimeout(() => onUpload(false), 200)
+      setTimeout(() => onUpload(false, { likert: e.target.value }), 100)
     )
   }
   //   const promise = getComment({ code }).then((d) => {

@@ -16,7 +16,7 @@
     console.log('e', e, 'type', type)
     onUpload(true)
     addComment({ [type]: e.target.value, email: $currentUser.email, code }).then(() =>
-      setTimeout(() => onUpload(false), 100)
+      setTimeout(() => onUpload(false, { [type]: e.target.value }), 50)
     )
   }
 </script>

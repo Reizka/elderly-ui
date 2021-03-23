@@ -1,9 +1,12 @@
 <script>
   import { csvParse } from 'd3-dsv'
+  // import { onMount } from 'svelte'
+
   export let extended = false
+  export let comments = []
   import GuideLinePage from './GuidelinesPage.svelte'
 
-  const promise = fetch('/cetools.csv')
+  const promise0 = fetch('/cetools.csv')
     .then((response) => response.text())
     .then((data) => {
       const lines = csvParse(data)
@@ -28,10 +31,10 @@
     })
 </script>
 
-{#if promise}
-  {#await promise}
+{#if promise0}
+  {#await promise0}
     <p class="text-6xl m-auto">Loading...</p>
   {:then data}
-    <GuideLinePage {data} {extended} />
+    <GuideLinePage {data} {comments} {extended} />
   {/await}
 {/if}

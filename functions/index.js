@@ -65,6 +65,25 @@ exports.getComment = functions.region('europe-west1').https.onCall(async (data, 
   });
 })
 
+exports.getAllComments = functions.region('europe-west1').https.onCall(async (data, context) => {
+
+  if (!context.auth && !context.auth.uid) {
+    console.log('error', context);
+    throw new functions.https.HttpsError('unauthenticated')
+  }
+  // const email = context.auth.email
+  const { email } = data;
+
+  var docRef = firestore.collection("users").doc(email).collection('comments')
+
+  return docRef.get().then((snap) => {
+    return snap.docs.map(d => d.data())
+
+  }).catch((error) => {
+    console.log("Error getting all documents:", error);
+  });
+})
+
 exports.getUser = functions.region('europe-west1').https.onCall(async (data, context) => {
 
   if (!context.auth && !context.auth.uid) {

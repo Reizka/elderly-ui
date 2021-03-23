@@ -4,6 +4,7 @@
 
   import TogglerBtn from '../../components/TogglerBtn.svelte'
   import Guidelines from '../../components/Guidelines/index.svelte'
+  import { onMount } from 'svelte'
 
   let extended = false
 
@@ -17,6 +18,22 @@
         console.error('Sign Out Error', error)
       }
     )
+
+  import { Functions } from '../../../config/firebase'
+  import { currentUser } from '../../../stores/current_user'
+
+  const getAllComments = Functions.httpsCallable('getAllComments')
+  console.log('currentUser', $currentUser)
+  let promise1 = null
+  // onMount(() => {
+
+  $: {
+    if ($currentUser)
+      promise1 = getAllComments({ email: $currentUser.email }).then((e) => {
+        return e.data
+      })
+  }
+  // })
 </script>
 
 <div class="flex {!extended && 'justify-center'}">
@@ -34,7 +51,13 @@
       <button class="border bg-indigo-200 text-lg p-1 rounded-sm font-bold " on:click={signout}> Sign out </button>
     </div>
     <div class="pr-48">
-      <Guidelines {extended} />
+      {#if promise1}
+        {#await promise1}
+          <p class="text-6xl m-auto">Loading Comments...</p>
+        {:then comments}
+          <Guidelines {comments} {extended} />
+        {/await}
+      {/if}
     </div>
   </div>
   <!-- <HowToUseIt /> -->
