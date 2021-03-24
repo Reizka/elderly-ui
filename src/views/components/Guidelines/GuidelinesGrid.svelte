@@ -22,9 +22,9 @@
         <th>{k}</th>
       {/each}
     </tr>
-    {#each data as d, i (i)}
+    {#each data as d, i (d.code)}
       <tr>
-        {#each keys as k (k)}
+        {#each keys as k (d.code + ' ' + k)}
           <Cell
             code={d.code}
             type={k.toLowerCase()}
@@ -38,7 +38,7 @@
                 stateComments = [e, ...stateComments]
               } else {
                 stateComments = [e, ...stateComments.filter((d) => d.code !== e.code)]
-                console.log('yeah', stateComments)
+                console.log('yeah')
               }
               // c = e
             }} />

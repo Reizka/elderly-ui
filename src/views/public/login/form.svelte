@@ -5,8 +5,9 @@
   import EmailInput from '../../components/forms/email_input.svelte'
   import FormButtons from '../../components/forms/buttons.svelte'
   // import { notificationMessage } from '../../../stores/notification_message.js'
-  import { Auth } from '../../../config/firebase'
+  import { Auth, Functions } from '../../../config/firebase'
 
+  const createUser = Functions.httpsCallable('createUser')
   import { getNotificationsContext } from 'svelte-notifications'
 
   const { addNotification, clearNotifications } = getNotificationsContext()

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "elderly-ui"
+    "default": "elderly-ui",
+    "dev": "elderly-ui-dev"
   }
 }
