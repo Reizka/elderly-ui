@@ -4,7 +4,6 @@
 
   import TogglerBtn from '../../components/TogglerBtn.svelte'
   import Guidelines from '../../components/Guidelines/index.svelte'
-  import { onMount } from 'svelte'
 
   let extended = false
 
@@ -23,15 +22,24 @@
   import { currentUser } from '../../../stores/current_user'
 
   const getAllComments = Functions.httpsCallable('getAllComments')
-  console.log('currentUser', $currentUser)
+  const getAllGuidelines = Functions.httpsCallable('getAllGuidelines')
+  const getAUC = Functions.httpsCallable('getAUC')
   let promise1 = null
+  let promise2 = null
+  let promise3 = null
+  $: admin = $currentUser && $currentUser.admin
   // onMount(() => {
 
   $: {
-    if ($currentUser)
+    if ($currentUser) {
       promise1 = getAllComments({ email: $currentUser.email }).then((e) => {
         return e.data
       })
+      promise2 = getAllGuidelines({}).then((e) => e.data)
+      // setTimeout(() => {
+      promise3 = getAUC().then((e) => e.data)
+      // }, 500)
+    }
   }
   // })
 </script>
@@ -55,7 +63,19 @@
         {#await promise1}
           <p class="text-6xl m-auto">Loading Comments...</p>
         {:then comments}
-          <Guidelines {comments} {extended} />
+          {#await promise2}
+            <p class="text-6xl m-auto">Loading Guidelines...</p>
+          {:then guidelines}
+            {#if admin}
+              {#await promise3}
+                <p class="text-6xl m-auto">Loading allComments...</p>
+              {:then allComments}
+                <Guidelines {comments} {extended} {guidelines} {allComments} />
+              {/await}
+            {:else}
+              <Guidelines {comments} {extended} {guidelines} />
+            {/if}
+          {/await}
         {/await}
       {/if}
     </div>

@@ -7,7 +7,7 @@
   // import { notificationMessage } from '../../../stores/notification_message.js'
   import { Auth, Functions } from '../../../config/firebase'
 
-  const createUser = Functions.httpsCallable('createUser')
+  // const getUser = Functions.httpsCallable('getUser')
   import { getNotificationsContext } from 'svelte-notifications'
 
   const { addNotification, clearNotifications } = getNotificationsContext()

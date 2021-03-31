@@ -1,10 +1,12 @@
 <script>
   export let data = []
   export let comments = []
+  export let extended = false
+  export let guidelines
+  export let commentsByCode
+
   import GuidelinesGrid from './GuidelinesGrid.svelte'
   import FilterMenu from './FilterMenu.svelte'
-  export let extended = false
-
   // const getComment = Functions.httpsCallable('getComment')
 
   // onMount(()=> {
@@ -76,6 +78,8 @@
   <FilterMenu keys={filterKeys} labels={filterKeysLabels} onChange={(ks) => (filterKeys = ks)} />
   <GuidelinesGrid
     {comments}
+    {commentsByCode}
+    {guidelines}
     data={filteredData}
     keys={extended ? keys0 : keys1}
     className="mt-2 {!extended && 'w-1/2'}" />

@@ -1,18 +1,24 @@
 <script>
   import Scroller from './Scroller.svelte'
-  import Modal from './Modal.svelte'
+  import Modal from './CommentModal.svelte'
   import { Edit } from 'tabler-icons-svelte'
+  import CommentCell from './CommentCell.svelte'
+  import EditCell from './EditCell.svelte'
+  import RestCell from './RestCell.svelte'
+  import { currentUser } from '../../../stores/current_user'
+  import AllCommentCell from './AllCommentCell.svelte'
   export let className
-  export let data = []
-  export let colSize = ''
+  export let data
   export let type
   export let code
   export let onComment
   export let comment
+  export let onUpdateGuideline
+  export let commentsByCode
   let visible = false
 
-  const getLs = (s) => s.split('-').filter((d) => d !== '')
-  const onModalClick = () => (visible = !visible)
+  $: admin = $currentUser && $currentUser.admin
+
   //   console.log('comment cell', comment)
 </script>
 
@@ -25,22 +31,21 @@
   } */
 </style>
 
-<td class="p-1 border border-indigo-500 {className}">
-  {#if getLs(data).length === 1}
-    <div class={colSize + ' flex items-center'}>
-      <div>{data}</div>
-      {#if type === 'code'}
-        <button class="px-2 py-1" on:click={onModalClick}><Edit color={comment ? 'green' : 'red'} /></button>
-      {/if}
-    </div>
-  {:else}
-    <Scroller>
-      <ul class=" m-1 list-disc list-inside max-h-80 overflow-auto {colSize}">
-        {#each getLs(data) as e}
-          <li>{e}</li>
-        {/each}
-      </ul>
-    </Scroller>
-  {/if}
-  <Modal {comment} {visible} {type} {code} onClick={onModalClick} {onComment} />
-</td>
+{#if type === 'code' && !admin}
+  <CommentCell {className} {data} {type} {code} {onComment} {comment} />
+{/if}
+{#if type === 'code' && admin}
+  <AllCommentCell {code} comments={commentsByCode.get(code)} {className} />
+{/if}
+
+{#if (type === 'CHECK' || type === 'GUIDELINE') && admin}
+  <EditCell {className} {data} {type} {code} {onUpdateGuideline} />
+{/if}
+
+{#if (type === 'CHECK' || type === 'GUIDELINE') && !admin}
+  <RestCell {className} {data} {code} />
+{/if}
+
+{#if type === 'c_HEUMLE' || type === 'c_SW' || type === 'c_WCAG' || type === 'c_D4ALL' || type === 'auth_note'}
+  <RestCell {className} {data} {code} />
+{/if}

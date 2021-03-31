@@ -8,6 +8,7 @@
   import FormButtons from '../../components/forms/buttons.svelte'
   import { getNotificationsContext } from 'svelte-notifications'
 
+  import { currentUser } from '../../../stores/current_user'
   const { addNotification, clearNotifications } = getNotificationsContext()
 
   const signupConstraints = {
@@ -82,12 +83,14 @@
         disableAction = false
       }
 
+      console.log('user', user)
       if (user) {
         const createUser = Functions.httpsCallable('createUser')
         createUser({ email })
           .then(() => {
             console.log('yeah')
             navigateTo('ui-grid')
+            currentUser.set({ email: user.email })
             addNotification({
               text: 'Your account was created successfully.',
               position: 'bottom-center',

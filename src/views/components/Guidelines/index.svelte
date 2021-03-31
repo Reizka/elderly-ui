@@ -1,10 +1,20 @@
 <script>
   import { csvParse } from 'd3-dsv'
+  import { group } from 'd3-array'
   // import { onMount } from 'svelte'
 
   export let extended = false
   export let comments = []
+  export let allComments
+  export let guidelines
   import GuideLinePage from './GuidelinesPage.svelte'
+
+  $: commentsByCode = allComments
+    ? group(
+        allComments.flatMap((d) => d.comments),
+        (d) => d.code
+      )
+    : new Map()
 
   const promise0 = fetch('/cetools.csv')
     .then((response) => response.text())
@@ -29,12 +39,13 @@
         }
       })
     })
+  console.log('guidelines', guidelines)
 </script>
 
 {#if promise0}
   {#await promise0}
-    <p class="text-6xl m-auto">Loading...</p>
+    <p class="text-6xl m-auto">Loading Spreadsheet...</p>
   {:then data}
-    <GuideLinePage {data} {comments} {extended} />
+    <GuideLinePage {data} {comments} {extended} {guidelines} {commentsByCode} />
   {/await}
 {/if}
