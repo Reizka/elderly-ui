@@ -12,7 +12,7 @@
 
 <main class="flex mt-10">
   <div class="m-auto">
-    <h3 class="text-3xl mx-auto">Elderly UI</h3>
+    <h3 class="text-3xl mx-auto">Elderly UI2</h3>
     <div class="">
       <span class="mb-3">Create your account</span>
       <SignupForm />

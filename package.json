@@ -30,6 +30,7 @@
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
+    "d3": "^7.0.0",
     "d3-array": "^2.12.1",
     "d3-dsv": "^2.0.0",
     "firebase": "^7.0.0",

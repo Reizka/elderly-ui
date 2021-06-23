@@ -55,10 +55,10 @@ exports.updateGuideline = functions.region('europe-west1').https.onCall(async (d
 
 exports.getAllGuidelines = functions.region('europe-west1').https.onCall(async (_, context) => {
 
-  if (!context.auth && !context.auth.uid) {
+ /* if (!context.auth && !context.auth.uid) {
     console.log('error', context);
     throw new functions.https.HttpsError('unauthenticated')
-  }
+  }*/
 
   var docRef = firestore.collection("guidelines")
 
@@ -155,4 +155,23 @@ exports.getUser = functions.region('europe-west1').https.onCall(async (data, con
   }).catch((error) => {
     console.log("Error getting document:", error);
   });
+})
+
+exports.getAllCommentsLandingPage = functions.region('europe-west1').https.onCall(async (data, context) => {
+
+  console.log("hello");
+  //var docRef = firestore.collection("users").doc("renny.lindberg@gmail.com").collection('comments')
+  const s = "blah blah blah";
+  /*const s = docRef.get().then((snap) => {
+    return snap.docs.map(d => 
+      {
+        console.log(d.data())
+       return d.data()
+      })
+
+  }).catch((error) => {
+    console.log("Error getting all documents:", error);
+  });*/
+
+  return context.send(s);
 })
