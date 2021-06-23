@@ -30,10 +30,13 @@
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
+    "chart.js": "^3.3.2",
     "d3": "^7.0.0",
     "d3-array": "^2.12.1",
     "d3-dsv": "^2.0.0",
     "firebase": "^7.0.0",
+    "mdbsvelte": "^1.0.12",
+    "svelte-chartjs": "^1.0.1",
     "svelte-notifications": "^0.9.9",
     "svelte-router-spa": "^5.0.0",
     "validate.js": "^0.13.0"

@@ -3,6 +3,8 @@
   import { Functions, Firestore } from '../../../config/firebase'
   import { guidelineCodes } from '../../../dataHandling/filter'
   //import { sample } from '../../../dataHandling/histogram'
+  import Stats from'./stats.svelte'
+  
   console.log('fuck this shite')
 
   let feedbackIndex = 0
@@ -93,6 +95,7 @@
           </div>
           <h2>Guideline {feedbackIndex + 1} out of {mergedComments.length-1}</h2>
           <div>
+            <Stats dataset={mergedComments[feedbackIndex].fb} />
             <p>code:{mergedComments[feedbackIndex].fb.code}</p>
             <h3>Importance scale</h3>
             <p>very important: {mergedComments[feedbackIndex].fb.strongPositive}</p>
